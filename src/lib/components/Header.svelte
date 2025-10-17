@@ -3,6 +3,8 @@
 	import ThemeToggle from './ThemeToggle.svelte';
 </script>
 
+<a href="#main">Skip to content</a>
+
 <header>
 	<div>
 		<h1><a href="/">Pokédex</a></h1>

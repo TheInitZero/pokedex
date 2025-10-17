@@ -7,7 +7,7 @@
 
 <Header />
 
-<main>
+<main id="main">
 	{@render children?.()}
 </main>
 
