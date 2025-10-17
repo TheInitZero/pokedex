@@ -42,6 +42,6 @@
 	</div>
 
 	<div>
-		<img src="/assets/thumbnails/001.webp" alt="" height="96" width="96" />
+		<img src="/assets/images/001.png" alt="" height="96" width="96" />
 	</div>
 </article>
