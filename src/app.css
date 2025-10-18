@@ -388,7 +388,7 @@ https://serp.co/tools/css-reset/
 @layer base {
 	:root {
 		--font-family: 'PT Code', monospace;
-		--font-size-base: 1.25rem;
+		--font-size-base: 1rem;
 		--scale: 1.2;
 		--line-height: 1.5;
 		--line-height-heading: 1.15;
@@ -404,6 +404,7 @@ https://serp.co/tools/css-reset/
 
 	body {
 		font-family: var(--font-family);
+		font-size: var(--font-size-base);
 		line-height: var(--line-height);
 	}
 
