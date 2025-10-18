@@ -1,5 +1,6 @@
 {#snippet iconSun()}
 	<svg
+		class="icon"
 		aria-hidden="true"
 		height="128"
 		width="128"
@@ -16,6 +17,7 @@
 
 {#snippet iconMoon()}
 	<svg
+		class="icon"
 		aria-hidden="true"
 		height="128"
 		width="128"
@@ -30,7 +32,24 @@
 	</svg>
 {/snippet}
 
-<button aria-pressed="false" aria-label="Dark Theme">
+<button class="button" aria-pressed="false" aria-label="Dark Theme">
 	{@render iconSun()}
-	{@render iconMoon()}
+	<!-- {@render iconMoon()} -->
 </button>
+
+<style>
+	.button {
+		display: grid;
+		place-content: center;
+		padding: 0.5em;
+		border: 2px solid black;
+		border-radius: 0.5em;
+		background-color: black;
+	}
+
+	.icon {
+		width: 1.5rem;
+		height: 1.5rem;
+		fill: white;
+	}
+</style>
