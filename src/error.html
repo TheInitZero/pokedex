@@ -1,5 +1,15 @@
-<section aria-labelledby="error-section-heading">
-	<h1 id="error-section-heading">Error: 500</h1>
-	<p>Something went wrong</p>
-	<a href="/">Go back to home page</a>
-</section>
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Error: %sveltekit.status%</title>
+	</head>
+	<body>
+		<section aria-labelledby="error-section-heading">
+			<h1 id="error-section-heading">Error: %sveltekit.status%</h1>
+			<p>%sveltekit.error.message%</p>
+			<a href="/">Go back to home page</a>
+		</section>
+	</body>
+</html>
