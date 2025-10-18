@@ -14,10 +14,12 @@
 	/>
 </svelte:head>
 
-<a class="skip-link" href="#main">Skip to content</a>
+<div class="wrapper">
+	<a class="skip-link" href="#main">Skip to content</a>
 
-<Header />
+	<Header />
 
-<main id="main">
-	{@render children?.()}
-</main>
+	<main id="main">
+		{@render children?.()}
+	</main>
+</div>
