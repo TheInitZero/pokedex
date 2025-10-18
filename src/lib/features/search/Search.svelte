@@ -27,17 +27,16 @@
 		<input type="text" name="search-name" id="search-name" />
 	</div>
 
-	<fieldset>
-		<legend>Type:</legend>
-		<ul>
+	<div>
+		<label for="search-type">Type:</label>
+		<select name="search-type" id="search-type">
+			<option value="All">All</option>
+
 			{#each pokemonTypes as pokemonType}
-				<li>
-					<label for="type-{pokemonType}">{pokemonType}</label>
-					<input type="checkbox" name="search-type" id="type-{pokemonType}" value={pokemonType} />
-				</li>
+				<option value={pokemonType}>{pokemonType}</option>
 			{/each}
-		</ul>
-	</fieldset>
+		</select>
+	</div>
 
 	<div>
 		<button type="submit">I choose you!</button>
