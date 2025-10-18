@@ -1,0 +1,27 @@
+@layer fonts {
+	@font-face {
+		font-family: 'PT Code';
+		src:
+			url('/assets/fonts/PTCode-Bold.woff2') format('woff2'),
+			url('/assets/fonts/PTCode-Bold.woff') format('woff');
+		font-weight: bold;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: 'PT Code';
+		src:
+			url('/assets/fonts/PTCode-Regular.woff2') format('woff2'),
+			url('/assets/fonts/PTCode-Regular.woff') format('woff');
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+	}
+}
+
+@layer base {
+	body {
+		font-family: 'PT Code', monospace;
+	}
+}
