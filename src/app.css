@@ -413,6 +413,10 @@ https://serp.co/tools/css-reset/
 		outline: 2px dashed tomato;
 		outline-offset: 2px;
 	}
+
+	a {
+		color: inherit;
+	}
 }
 
 @layer utilities {
