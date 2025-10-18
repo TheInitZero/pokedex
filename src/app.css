@@ -378,7 +378,24 @@ https://serp.co/tools/css-reset/
 }
 
 @layer base {
+	:root {
+		--font-family: 'PT Code', monospace;
+		--font-size-base: 1.25rem;
+		--scale: 1.2;
+		--line-height: 1.5;
+		--line-height-heading: 1.15;
+
+		--font-size-sm: calc(var(--font-size-base) / var(--scale));
+		--font-size-h6: calc(var(--font-size-base) * var(--scale));
+		--font-size-h5: calc(var(--font-size-h6) * var(--scale));
+		--font-size-h4: calc(var(--font-size-h5) * var(--scale));
+		--font-size-h3: calc(var(--font-size-h4) * var(--scale));
+		--font-size-h2: calc(var(--font-size-h3) * var(--scale));
+		--font-size-h1: calc(var(--font-size-h2) * var(--scale));
+	}
+
 	body {
-		font-family: 'PT Code', monospace;
+		font-family: var(--font-family);
+		line-height: var(--line-height);
 	}
 }
