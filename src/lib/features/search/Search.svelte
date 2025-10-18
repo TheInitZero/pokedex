@@ -39,6 +39,6 @@
 	</div>
 
 	<div>
-		<button type="submit">I choose you!</button>
+		<button type="submit">Search</button>
 	</div>
 </form>
