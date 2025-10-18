@@ -1,34 +1,7 @@
-{#snippet iconWeight()}
-	<svg
-		aria-hidden="true"
-		height="24"
-		width="24"
-		xmlns="http://www.w3.org/2000/svg"
-		viewBox="0 0 24 24"
-		fill="currentColor"
-	>
-		<path
-			d="M14.0004 6C14.0004 7.10457 13.1049 8 12.0004 8C10.8958 8 10.0004 7.10457 10.0004 6C10.0004 4.89543 10.8958 4 12.0004 4C13.1049 4 14.0004 4.89543 14.0004 6ZM15.4652 8C15.8056 7.41165 16.0004 6.72857 16.0004 6C16.0004 3.79086 14.2095 2 12.0004 2C9.79122 2 8.00036 3.79086 8.00036 6C8.00036 6.72857 8.19515 7.41165 8.53549 8H5.06615C4.57888 8 4.16255 8.3512 4.08045 8.8315L2.2001 19.8315C2.0957 20.4423 2.56618 21 3.18581 21H20.8149C21.4345 21 21.905 20.4423 21.8006 19.8315L19.9203 8.8315C19.8382 8.3512 19.4218 8 18.9346 8H15.4652ZM12.0004 10H18.091L19.6295 19H4.37125L5.90971 10H12.0004Z"
-		>
-		</path>
-	</svg>
-{/snippet}
-
-{#snippet iconHeight()}
-	<svg
-		aria-hidden="true"
-		height="24"
-		width="24"
-		xmlns="http://www.w3.org/2000/svg"
-		viewBox="0 0 24 24"
-		fill="currentColor"
-	>
-		<path
-			d="M6.34323 14.728L3.5148 17.5565L7.05033 21.092L20.4854 7.65696L16.9498 4.12143L14.8285 6.24275L16.2427 7.65696L14.8285 9.07118L13.4143 7.65696L11.293 9.77828L13.4143 11.8996L12.0001 13.3138L9.87876 11.1925L7.75744 13.3138L9.17165 14.728L7.75744 16.1422L6.34323 14.728ZM17.6569 2.00011L22.6067 6.94986C22.9972 7.34038 22.9972 7.97354 22.6067 8.36407L7.75744 23.2133C7.36692 23.6038 6.73375 23.6038 6.34323 23.2133L1.39348 18.2636C1.00295 17.873 1.00295 17.2399 1.39348 16.8494L16.2427 2.00011C16.6332 1.60958 17.2664 1.60958 17.6569 2.00011Z"
-		>
-		</path>
-	</svg>
-{/snippet}
+<script>
+	import PokemonProfile from './PokemonProfile.svelte';
+	import PokemonTypes from './PokemonTypes.svelte';
+</script>
 
 <article aria-labelledby="pokemon-name-1">
 	<div>
@@ -36,28 +9,9 @@
 			<a href="/1">Bulbasaur</a>
 		</h2>
 
-		<ul aria-label="Bulbasaur belongs to the types:">
-			<li>
-				<img src="/assets/typeIcons/grass.svg" alt="" height="24" width="24" />
-				<span>Grass</span>
-			</li>
-			<li>
-				<img src="/assets/typeIcons/poison.svg" alt="" height="24" width="24" />
-				<span>Poison</span>
-			</li>
-		</ul>
+		<PokemonTypes />
 
-		<div>
-			<div aria-label="Weight">
-				{@render iconWeight()}
-				<span>6.9 kg</span>
-			</div>
-
-			<div aria-label="Height">
-				{@render iconHeight()}
-				<span>0.7 m</span>
-			</div>
-		</div>
+		<PokemonProfile />
 	</div>
 
 	<div>
