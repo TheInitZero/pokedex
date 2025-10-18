@@ -398,6 +398,21 @@ https://serp.co/tools/css-reset/
 		font-family: var(--font-family);
 		line-height: var(--line-height);
 	}
+
+	:is(
+		a[href]:not([tabindex='-1']),
+		area[href]:not([tabindex='-1']),
+		input:not([disabled]):not([tabindex='-1']),
+		select:not([disabled]):not([tabindex='-1']),
+		textarea:not([disabled]):not([tabindex='-1']),
+		button:not([disabled]):not([tabindex='-1']),
+		iframe:not([tabindex='-1']),
+		[tabindex]:not([tabindex='-1']),
+		[contentEditable='true']:not([tabindex='-1'])
+	):focus {
+		outline: 2px dashed tomato;
+		outline-offset: 2px;
+	}
 }
 
 @layer utilities {
