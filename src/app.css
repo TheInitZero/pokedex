@@ -425,6 +425,10 @@ https://serp.co/tools/css-reset/
 	a {
 		color: inherit;
 	}
+
+	image {
+		display: block;
+	}
 }
 
 @layer components {
