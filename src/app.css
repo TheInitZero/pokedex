@@ -419,6 +419,30 @@ https://serp.co/tools/css-reset/
 	}
 }
 
+@layer components {
+	.skip-link {
+		display: inline-block;
+		padding: 1em;
+		border: 2px solid black;
+		border-radius: 0.5em;
+		background-color: black;
+		color: white;
+		position: absolute;
+		left: -10000px;
+		top: auto;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+
+		&:focus {
+			position: static;
+			width: auto;
+			height: auto;
+			margin: 0.25rem;
+		}
+	}
+}
+
 @layer utilities {
 	.text-sm {
 		font-size: var(--font-size-sm);

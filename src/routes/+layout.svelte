@@ -14,7 +14,7 @@
 	/>
 </svelte:head>
 
-<a href="#main">Skip to content</a>
+<a class="skip-link" href="#main">Skip to content</a>
 
 <Header />
 
