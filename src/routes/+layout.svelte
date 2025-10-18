@@ -13,6 +13,8 @@
 	/>
 </svelte:head>
 
+<a href="#main">Skip to content</a>
+
 <Header />
 
 <main id="main">
