@@ -422,7 +422,7 @@ https://serp.co/tools/css-reset/
 @layer components {
 	.skip-link {
 		display: inline-block;
-		padding: 1em;
+		padding: 0.5em;
 		border: 2px solid black;
 		border-radius: 0.5em;
 		background-color: black;
