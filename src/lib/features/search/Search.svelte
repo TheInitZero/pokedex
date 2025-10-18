@@ -24,8 +24,8 @@
 {#snippet iconSearch()}
 	<svg
 		aria-hidden="true"
-		height="24"
-		width="24"
+		height="128"
+		width="128"
 		xmlns="http://www.w3.org/2000/svg"
 		viewBox="0 0 24 24"
 		fill="currentColor"

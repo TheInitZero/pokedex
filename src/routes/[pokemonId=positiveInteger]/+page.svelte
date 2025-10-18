@@ -6,8 +6,8 @@
 {#snippet iconDNA()}
 	<svg
 		aria-hidden="true"
-		height="24"
-		width="24"
+		height="128"
+		width="128"
 		xmlns="http://www.w3.org/2000/svg"
 		viewBox="0 0 24 24"
 		fill="currentColor"
@@ -22,8 +22,8 @@
 {#snippet iconMen()}
 	<svg
 		aria-hidden="true"
-		height="24"
-		width="24"
+		height="128"
+		width="128"
 		xmlns="http://www.w3.org/2000/svg"
 		viewBox="0 0 24 24"
 		fill="currentColor"
@@ -37,8 +37,8 @@
 {#snippet iconWomen()}
 	<svg
 		aria-hidden="true"
-		height="24"
-		width="24"
+		height="128"
+		width="128"
 		xmlns="http://www.w3.org/2000/svg"
 		viewBox="0 0 24 24"
 		fill="currentColor"
@@ -52,8 +52,8 @@
 {#snippet iconHP()}
 	<svg
 		aria-hidden="true"
-		height="24"
-		width="24"
+		height="128"
+		width="128"
 		xmlns="http://www.w3.org/2000/svg"
 		viewBox="0 0 24 24"
 		fill="currentColor"
@@ -66,8 +66,8 @@
 {#snippet iconAttack()}
 	<svg
 		aria-hidden="true"
-		height="24"
-		width="24"
+		height="128"
+		width="128"
 		xmlns="http://www.w3.org/2000/svg"
 		viewBox="0 0 24 24"
 		fill="currentColor"
@@ -80,8 +80,8 @@
 {#snippet iconSpecialAttack()}
 	<svg
 		aria-hidden="true"
-		height="24"
-		width="24"
+		height="128"
+		width="128"
 		xmlns="http://www.w3.org/2000/svg"
 		viewBox="0 0 24 24"
 		fill="currentColor"
@@ -94,8 +94,8 @@
 {#snippet iconDefense()}
 	<svg
 		aria-hidden="true"
-		height="24"
-		width="24"
+		height="128"
+		width="128"
 		xmlns="http://www.w3.org/2000/svg"
 		viewBox="0 0 24 24"
 		fill="currentColor"
@@ -108,8 +108,8 @@
 {#snippet iconSpecialDefense()}
 	<svg
 		aria-hidden="true"
-		height="24"
-		width="24"
+		height="128"
+		width="128"
 		xmlns="http://www.w3.org/2000/svg"
 		viewBox="0 0 24 24"
 		fill="currentColor"
@@ -122,8 +122,8 @@
 {#snippet iconSpeed()}
 	<svg
 		aria-hidden="true"
-		height="24"
-		width="24"
+		height="128"
+		width="128"
 		xmlns="http://www.w3.org/2000/svg"
 		viewBox="0 0 24 24"
 		fill="currentColor"
