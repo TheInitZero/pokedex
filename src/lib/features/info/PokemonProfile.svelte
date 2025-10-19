@@ -15,7 +15,7 @@
 </div>
 
 <style>
-	.icon {
+	:global(.icon--weight, .icon--height) {
 		height: 1.5rem;
 		width: 1.5rem;
 	}

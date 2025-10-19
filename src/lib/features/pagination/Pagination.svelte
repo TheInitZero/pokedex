@@ -11,7 +11,7 @@
 </nav>
 
 <style>
-	.icon {
+	:global(.icon--left-arrow, .icon--right-arrow) {
 		height: 1.5rem;
 		width: 1.5rem;
 		fill: white;

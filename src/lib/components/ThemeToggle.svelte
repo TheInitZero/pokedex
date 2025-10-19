@@ -17,7 +17,7 @@
 		background-color: black;
 	}
 
-	.icon {
+	:global(.icon--sun, .icon--moon) {
 		width: 1.5rem;
 		height: 1.5rem;
 		fill: white;

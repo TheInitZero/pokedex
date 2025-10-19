@@ -59,7 +59,7 @@
 		gap: 0.5rem;
 	}
 
-	.icon {
+	:global(.icon--search) {
 		height: 1rem;
 		width: 1rem;
 		fill: white;
