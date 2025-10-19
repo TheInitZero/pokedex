@@ -1,5 +1,6 @@
 {#snippet iconWeight()}
 	<svg
+		class="icon"
 		aria-hidden="true"
 		height="128"
 		width="128"
@@ -16,6 +17,7 @@
 
 {#snippet iconHeight()}
 	<svg
+		class="icon"
 		aria-hidden="true"
 		height="128"
 		width="128"
@@ -30,14 +32,39 @@
 	</svg>
 {/snippet}
 
-<div>
-	<div aria-label="Weight">
+<div class="profile">
+	<div class="profile__group" aria-label="Weight">
 		{@render iconWeight()}
-		<span>6.9 kg</span>
+		<span class="profile__stat">6.9 kg</span>
 	</div>
 
-	<div aria-label="Height">
+	<div class="profile__group" aria-label="Height">
 		{@render iconHeight()}
-		<span>0.7 m</span>
+		<span class="profile__stat">0.7 m</span>
 	</div>
 </div>
+
+<style>
+	.icon {
+		height: 1.5rem;
+		width: 1.5rem;
+	}
+
+	.profile {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 1rem;
+	}
+
+	.profile__group {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+	}
+
+	.profile__stat {
+		font-size: var(--font-size-sm);
+		font-weight: bold;
+	}
+</style>
