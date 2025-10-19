@@ -430,6 +430,38 @@ https://serp.co/tools/css-reset/
 	image {
 		display: block;
 	}
+
+	h6 {
+		font-size: var(--font-size-h6);
+	}
+
+	h5 {
+		font-size: var(--font-size-h5);
+	}
+
+	h4 {
+		font-size: var(--font-size-h4);
+		font-weight: bold;
+		line-height: var(--line-height-heading);
+	}
+
+	h3 {
+		font-size: var(--font-size-h3);
+		font-weight: bold;
+		line-height: var(--line-height-heading);
+	}
+
+	h2 {
+		font-size: var(--font-size-h2);
+		font-weight: bold;
+		line-height: var(--line-height-heading);
+	}
+
+	h1 {
+		font-size: var(--font-size-h1);
+		font-weight: bold;
+		line-height: var(--line-height-heading);
+	}
 }
 
 @layer components {
