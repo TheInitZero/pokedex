@@ -433,10 +433,12 @@ https://serp.co/tools/css-reset/
 
 	h6 {
 		font-size: var(--font-size-h6);
+		line-height: var(--line-height-heading);
 	}
 
 	h5 {
 		font-size: var(--font-size-h5);
+		line-height: var(--line-height-heading);
 	}
 
 	h4 {
@@ -498,10 +500,12 @@ https://serp.co/tools/css-reset/
 
 	.text-h6 {
 		font-size: var(--font-size-h6);
+		line-height: var(--line-height-heading);
 	}
 
 	.text-h5 {
 		font-size: var(--font-size-h5);
+		line-height: var(--line-height-heading);
 	}
 
 	.text-h4 {
