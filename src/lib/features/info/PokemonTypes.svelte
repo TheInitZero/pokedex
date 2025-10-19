@@ -1,10 +1,14 @@
+<script>
+	import PokemonTypeIcon from './PokemonTypeIcon.svelte';
+</script>
+
 <ul class="type-list" aria-label="Bulbasaur belongs to the types:">
 	<li class="type-list__item">
-		<img class="type-list__icon" src="/assets/typeIcons/grass.svg" alt="" height="48" width="48" />
+		<PokemonTypeIcon pokemonType="Grass" />
 		<span class="type-list__name">Grass</span>
 	</li>
 	<li class="type-list__item">
-		<img class="type-list__icon" src="/assets/typeIcons/poison.svg" alt="" height="48" width="48" />
+		<PokemonTypeIcon pokemonType="Poison" />
 		<span class="type-list__name">Poison</span>
 	</li>
 </ul>
@@ -27,7 +31,7 @@
 		gap: 0.5rem;
 	}
 
-	.type-list__icon {
+	:global(.icon-type) {
 		height: 1rem;
 		width: 1rem;
 	}
