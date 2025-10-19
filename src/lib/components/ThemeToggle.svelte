@@ -1,10 +1,6 @@
-<script>
-	import { iconMoon, iconSun } from './Icons.svelte';
-</script>
-
 <button class="button" aria-pressed="false" aria-label="Dark Theme">
-	{@render iconSun()}
-	<!-- {@render iconMoon()} -->
+	<!-- <i class="icon ri-sun-fill"></i> -->
+	<i class="icon ri-moon-fill"></i>
 </button>
 
 <style>
@@ -17,9 +13,7 @@
 		background-color: black;
 	}
 
-	:global(.icon--sun, .icon--moon) {
-		width: 1.5rem;
-		height: 1.5rem;
-		fill: white;
+	.icon {
+		color: white;
 	}
 </style>

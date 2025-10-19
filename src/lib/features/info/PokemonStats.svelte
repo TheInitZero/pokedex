@@ -1,45 +1,34 @@
-<script>
-	import {
-		iconAttack,
-		iconDefense,
-		iconHP,
-		iconSpecialAttack,
-		iconSpecialDefense,
-		iconSpeed
-	} from '$lib/components/Icons.svelte';
-</script>
-
 <section aria-labelledby="stats-section-heading">
 	<h3 id="stats-section-heading">Stats</h3>
 
 	<ul aria-labelledby="stats-section-heading">
 		<li>
-			{@render iconHP()}
+			<i class="ri-heart-line"></i>
 			<span>HP</span>
 			<span>45</span>
 		</li>
 		<li>
-			{@render iconAttack()}
+			<i class="ri-sword-line"></i>
 			<span>Attack</span>
 			<span>49</span>
 		</li>
 		<li>
-			{@render iconDefense()}
+			<i class="ri-shield-line"></i>
 			<span>Defense</span>
 			<span>49</span>
 		</li>
 		<li>
-			{@render iconSpecialAttack()}
+			<i class="ri-sword-fill"></i>
 			<span>Special Attack</span>
 			<span>65</span>
 		</li>
 		<li>
-			{@render iconSpecialDefense()}
+			<i class="ri-shield-fill"></i>
 			<span>Special Defense</span>
 			<span>65</span>
 		</li>
 		<li>
-			{@render iconSpeed()}
+			<i class="ri-dashboard-3-line"></i>
 			<span>Speed</span>
 			<span>45</span>
 		</li>

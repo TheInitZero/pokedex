@@ -1,6 +1,4 @@
 <script>
-	import { iconSearch } from '$lib/components/Icons.svelte';
-
 	const pokemonTypes = [
 		'Normal',
 		'Fire',
@@ -43,7 +41,7 @@
 	<div class="form__group form__group--3">
 		<button class="button" type="submit">
 			<span>Search</span>
-			{@render iconSearch()}
+			<i class="icon ri-search-line"></i>
 		</button>
 	</div>
 </form>
@@ -59,10 +57,8 @@
 		gap: 0.5rem;
 	}
 
-	:global(.icon--search) {
-		height: 1rem;
-		width: 1rem;
-		fill: white;
+	.icon {
+		color: white;
 	}
 
 	.input,

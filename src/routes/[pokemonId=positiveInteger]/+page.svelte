@@ -1,5 +1,4 @@
 <script>
-	import { iconDNA, iconMen, iconWomen } from '$lib/components/Icons.svelte';
 	import PokemonProfile from '$lib/features/info/PokemonProfile.svelte';
 	import PokemonStats from '$lib/features/info/PokemonStats.svelte';
 	import PokemonTypes from '$lib/features/info/PokemonTypes.svelte';
@@ -23,14 +22,14 @@
 	<PokemonProfile />
 
 	<div aria-label="Species">
-		{@render iconDNA()}
+		<i class="ri-dna-line"></i>
 		<span>Seed Pokémon</span>
 	</div>
 
 	<div aria-label="Gender Ratio">
-		{@render iconMen()}
+		<i class="ri-men-line"></i>
+		<i class="ri-women-line"></i>
 		<span>87.5 : 12.5</span>
-		{@render iconWomen()}
 	</div>
 
 	<div>

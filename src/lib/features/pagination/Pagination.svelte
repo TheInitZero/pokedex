@@ -1,20 +1,18 @@
-<script>
-	import { iconLeftArrow, iconRightArrow } from '$lib/components/Icons.svelte';
-</script>
-
 <nav aria-label="Pagination" class="pagination">
 	<div class="pagination__group">
-		<a class="pagination__link" href="/" aria-label="Previous">{@render iconLeftArrow()}</a>
+		<a class="pagination__link" href="/" aria-label="Previous">
+			<i class="icon ri-arrow-left-line"></i>
+		</a>
 		<span>Page 12 of 100</span>
-		<a class="pagination__link" href="/" aria-label="Next">{@render iconRightArrow()}</a>
+		<a class="pagination__link" href="/" aria-label="Next">
+			<i class="icon ri-arrow-right-line"></i>
+		</a>
 	</div>
 </nav>
 
 <style>
-	:global(.icon--left-arrow, .icon--right-arrow) {
-		height: 1.5rem;
-		width: 1.5rem;
-		fill: white;
+	.icon {
+		color: white;
 	}
 
 	.pagination {
