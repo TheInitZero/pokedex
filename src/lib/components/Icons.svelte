@@ -21,6 +21,7 @@
 
 {#snippet iconDNA()}
 	<svg
+		class="icon icon--dna"
 		aria-hidden="true"
 		height="128"
 		width="128"
@@ -37,6 +38,7 @@
 
 {#snippet iconMen()}
 	<svg
+		class="icon icon--men"
 		aria-hidden="true"
 		height="128"
 		width="128"
@@ -52,6 +54,7 @@
 
 {#snippet iconWomen()}
 	<svg
+		class="icon icon--women"
 		aria-hidden="true"
 		height="128"
 		width="128"
@@ -67,7 +70,7 @@
 
 {#snippet iconSearch()}
 	<svg
-		class="icon"
+		class="icon icon--search"
 		aria-hidden="true"
 		height="128"
 		width="128"
@@ -84,7 +87,7 @@
 
 {#snippet iconLeftArrow()}
 	<svg
-		class="icon"
+		class="icon icon--left-arrow"
 		aria-hidden="true"
 		height="128"
 		width="128"
@@ -98,7 +101,7 @@
 
 {#snippet iconRightArrow()}
 	<svg
-		class="icon"
+		class="icon icon--right-arrow"
 		aria-hidden="true"
 		height="128"
 		width="128"
@@ -112,6 +115,7 @@
 
 {#snippet iconHP()}
 	<svg
+		class="icon icon--hp"
 		aria-hidden="true"
 		height="128"
 		width="128"
@@ -126,6 +130,7 @@
 
 {#snippet iconAttack()}
 	<svg
+		class="icon icon--attack"
 		aria-hidden="true"
 		height="128"
 		width="128"
@@ -140,6 +145,7 @@
 
 {#snippet iconSpecialAttack()}
 	<svg
+		class="icon icon--special-attack"
 		aria-hidden="true"
 		height="128"
 		width="128"
@@ -154,6 +160,7 @@
 
 {#snippet iconDefense()}
 	<svg
+		class="icon icon--defense"
 		aria-hidden="true"
 		height="128"
 		width="128"
@@ -168,6 +175,7 @@
 
 {#snippet iconSpecialDefense()}
 	<svg
+		class="icon icon--special-defense"
 		aria-hidden="true"
 		height="128"
 		width="128"
@@ -182,6 +190,7 @@
 
 {#snippet iconSpeed()}
 	<svg
+		class="icon icon--speed"
 		aria-hidden="true"
 		height="128"
 		width="128"
@@ -196,7 +205,7 @@
 
 {#snippet iconWeight()}
 	<svg
-		class="icon"
+		class="icon icon--weight"
 		aria-hidden="true"
 		height="128"
 		width="128"
@@ -213,7 +222,7 @@
 
 {#snippet iconHeight()}
 	<svg
-		class="icon"
+		class="icon icon--height"
 		aria-hidden="true"
 		height="128"
 		width="128"
@@ -230,7 +239,7 @@
 
 {#snippet iconSun()}
 	<svg
-		class="icon"
+		class="icon icon--sun"
 		aria-hidden="true"
 		height="128"
 		width="128"
@@ -247,7 +256,7 @@
 
 {#snippet iconMoon()}
 	<svg
-		class="icon"
+		class="icon icon--moon"
 		aria-hidden="true"
 		height="128"
 		width="128"
