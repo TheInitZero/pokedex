@@ -1,30 +1,6 @@
-{#snippet iconLeftArrow()}
-	<svg
-		class="icon"
-		aria-hidden="true"
-		height="128"
-		width="128"
-		xmlns="http://www.w3.org/2000/svg"
-		viewBox="0 0 24 24"
-		fill="currentColor"
-	>
-		<path d="M12 13V20L4 12L12 4V11H20V13H12Z"></path>
-	</svg>
-{/snippet}
-
-{#snippet iconRightArrow()}
-	<svg
-		class="icon"
-		aria-hidden="true"
-		height="128"
-		width="128"
-		xmlns="http://www.w3.org/2000/svg"
-		viewBox="0 0 24 24"
-		fill="currentColor"
-	>
-		<path d="M12 13H4V11H12V4L20 12L12 20V13Z"></path>
-	</svg>
-{/snippet}
+<script>
+	import { iconLeftArrow, iconRightArrow } from '$lib/components/Icons.svelte';
+</script>
 
 <nav aria-label="Pagination" class="pagination">
 	<div class="pagination__group">
