@@ -42,7 +42,7 @@
 	}
 
 	.pagination {
-		margin-block-start: 1em;
+		margin-block-start: 2em;
 		display: grid;
 		place-content: center;
 	}
