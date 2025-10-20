@@ -11,21 +11,20 @@
 
 <style>
 	.error {
-		margin-block-start: 1em;
 		border: 2px solid black;
 		padding: 1em;
 		border-radius: 1em;
-		margin-inline: auto;
+		margin: 1em auto 0 auto;
 		max-width: fit-content;
 		text-align: center;
 	}
 
 	.error__message {
-		margin-block-start: 0.5rem;
+		margin-top: 0.5rem;
 	}
 
 	.error__link {
-		margin-block-start: 0.5rem;
+		margin-top: 0.5rem;
 		display: inline-block;
 		padding: 0.5em;
 		border: 2px solid black;

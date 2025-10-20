@@ -37,11 +37,11 @@
 
 <style>
 	.section {
-		margin-block-start: 1em;
+		margin-top: 1em;
 	}
 
 	.stats {
-		margin-block-start: 1em;
+		margin-top: 1em;
 		display: grid;
 		gap: 1rem;
 		grid-template-columns: repeat(2, 1fr);
@@ -61,7 +61,7 @@
 	}
 
 	.stat__point {
-		margin-block-start: 0.5rem;
+		margin-top: 0.5rem;
 	}
 
 	.stat__icon {

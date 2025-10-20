@@ -61,11 +61,11 @@
 
 <style>
 	.section {
-		margin-block-start: 1em;
+		margin-top: 1em;
 	}
 
 	.tiles {
-		margin-block-start: 1em;
+		margin-top: 1em;
 		display: grid;
 		gap: 1rem;
 		grid-template-rows: repeat(6, minmax(8rem, auto));
@@ -132,7 +132,7 @@
 	}
 
 	.tile__content {
-		margin-block-start: 0.5rem;
+		margin-top: 0.5rem;
 	}
 
 	:global(.tile__icon) {
