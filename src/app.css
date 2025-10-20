@@ -429,6 +429,7 @@ https://serp.co/tools/css-reset/
 
 	image {
 		display: block;
+		max-width: 100%;
 	}
 
 	h6 {
