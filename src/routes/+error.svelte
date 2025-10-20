@@ -2,7 +2,7 @@
 	import { page } from '$app/state';
 </script>
 
-<section class="error" aria-labelledby="error-section-heading">
+<section class="error card" aria-labelledby="error-section-heading">
 	<h2 class="error__title" id="error-section-heading">Error: {page.status}</h2>
 	<img class="error__image" src="/assets/images/404.png" alt="" height="160" width="160" />
 	<p class="error__message">{page.error?.message ?? 'Something went wrong'}</p>
@@ -11,9 +11,6 @@
 
 <style>
 	.error {
-		border: 2px solid black;
-		padding: 1em;
-		border-radius: 1em;
 		margin: 1em auto 0 auto;
 		max-width: fit-content;
 		text-align: center;

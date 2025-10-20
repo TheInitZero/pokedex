@@ -1,5 +1,5 @@
 <nav aria-label="Pagination" class="pagination">
-	<div class="pagination__group">
+	<div class="pagination__group card">
 		<a class="pagination__link button" href="/" aria-label="Previous">
 			<i class="icon ri-arrow-left-line ri-xl"></i>
 		</a>
@@ -22,9 +22,6 @@
 	}
 
 	.pagination__group {
-		border: 2px solid black;
-		padding: 1em;
-		border-radius: 1em;
 		display: flex;
 		align-items: center;
 		justify-content: center;

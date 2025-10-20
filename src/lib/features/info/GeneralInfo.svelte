@@ -6,11 +6,11 @@
 	<h3 id="general-info-section-heading">General Info</h3>
 
 	<div class="tiles">
-		<div class="tile tile--1">
+		<div class="tile tile--1 card">
 			<img class="tile__image" src="/assets/images/001.png" alt="" height="240" width="240" />
 		</div>
 
-		<div class="tile tile--2">
+		<div class="tile tile--2 card">
 			<h4 class="tile__heading text-base">Types</h4>
 			<div class="tile__content text-h5">
 				<p>Grass, Poison</p>
@@ -19,7 +19,7 @@
 			<PokemonTypeIcon className={'tile__icon tile__icon--type'} pokemonType="Poison" />
 		</div>
 
-		<div class="tile tile--3">
+		<div class="tile tile--3 card">
 			<h4 class="tile__heading text-base">Profile</h4>
 			<div class="tile__content text-h5">
 				<p>6.9 kg,<br /> 0.7 m</p>
@@ -28,7 +28,7 @@
 			<i class="tile__icon ri-ruler-line"></i>
 		</div>
 
-		<div class="tile tile--4">
+		<div class="tile tile--4 card">
 			<h4 class="tile__heading text-base">Species</h4>
 			<div class="tile__content text-h5">
 				<p>Seed Pokémon</p>
@@ -36,7 +36,7 @@
 			<i class="tile__icon ri-dna-line"></i>
 		</div>
 
-		<div class="tile tile--5">
+		<div class="tile tile--5 card">
 			<h4 class="tile__heading text-base">Gender Ratio</h4>
 			<div class="tile__content text-h5">
 				<p>87.5 : 12.5</p>
@@ -45,7 +45,7 @@
 			<i class="tile__icon ri-men-line"></i>
 		</div>
 
-		<div class="tile tile--6">
+		<div class="tile tile--6 card">
 			<h4 class="tile__heading text-base">Description</h4>
 			<div class="tile__content text-h5">
 				<p>
@@ -83,9 +83,6 @@
 
 	.tile {
 		position: relative;
-		border: 2px solid black;
-		padding: 1em;
-		border-radius: 1em;
 	}
 
 	.tile--1 {

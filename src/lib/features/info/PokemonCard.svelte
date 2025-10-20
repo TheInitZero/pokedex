@@ -24,9 +24,6 @@
 		display: flex;
 		flex-direction: column-reverse;
 		gap: 0.5rem;
-		padding: 1em;
-		border: 2px solid black;
-		border-radius: 1em;
 		width: 240px;
 	}
 

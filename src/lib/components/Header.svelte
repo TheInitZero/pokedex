@@ -9,7 +9,7 @@
 		<ThemeToggle />
 	</div>
 
-	<div class="header__row header__row--2">
+	<div class="header__row card">
 		<Search />
 	</div>
 </header>
@@ -19,11 +19,5 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-	}
-
-	.header__row--2 {
-		padding: 1em;
-		border: 2px solid black;
-		border-radius: 1em;
 	}
 </style>
