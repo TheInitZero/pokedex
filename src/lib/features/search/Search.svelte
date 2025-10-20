@@ -41,7 +41,7 @@
 	<div class="form__group form__group--3">
 		<button class="button" type="submit">
 			<span>Search</span>
-			<i class="icon ri-search-line"></i>
+			<i class="icon icon--remix ri-search-line"></i>
 		</button>
 	</div>
 </form>
@@ -75,10 +75,6 @@
 			justify-items: stretch;
 			align-items: end;
 		}
-	}
-
-	.icon {
-		color: white;
 	}
 
 	.input,

@@ -496,6 +496,21 @@ https://serp.co/tools/css-reset/
 		border: 2px solid black;
 		border-radius: var(--padding);
 	}
+
+	.icon {
+		--color: white;
+		--size: 1rem;
+		color: var(--color);
+
+		&.icon--remix {
+			font-size: var(--size);
+		}
+
+		&.icon--svg {
+			height: var(--size);
+			width: var(--size);
+		}
+	}
 }
 
 @layer utilities {

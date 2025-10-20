@@ -1,18 +1,18 @@
 <nav aria-label="Pagination" class="pagination">
 	<div class="pagination__group card">
 		<a class="pagination__link button" href="/" aria-label="Previous">
-			<i class="icon ri-arrow-left-line ri-xl"></i>
+			<i class="icon icon--remix ri-arrow-left-line"></i>
 		</a>
 		<span>Page 12 of 100</span>
 		<a class="pagination__link button" href="/" aria-label="Next">
-			<i class="icon ri-arrow-right-line ri-xl"></i>
+			<i class="icon icon--remix ri-arrow-right-line"></i>
 		</a>
 	</div>
 </nav>
 
 <style>
 	.icon {
-		color: white;
+		--size: 1.5rem;
 	}
 
 	.pagination {
@@ -35,6 +35,6 @@
 	}
 
 	.button {
-		--padding-vertical: 0.75em;
+		--padding-horizontal: 0.75em;
 	}
 </style>

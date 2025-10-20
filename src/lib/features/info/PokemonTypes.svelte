@@ -27,11 +27,6 @@
 		gap: 0.5rem;
 	}
 
-	:global(.icon-type) {
-		height: 1rem;
-		width: 1rem;
-	}
-
 	.type-list__name {
 		font-size: var(--font-size-sm);
 	}

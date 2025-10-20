@@ -52,7 +52,7 @@
 
 {#snippet iconBug()}
 	<svg
-		class="icon-type icon-type--Bug {className}"
+		class="icon icon--svg icon--Bug {className}"
 		fill="none"
 		height="48"
 		width="48"
@@ -69,7 +69,7 @@
 
 {#snippet iconDark()}
 	<svg
-		class="icon-type icon-type--Dark {className}"
+		class="icon icon--svg icon--Dark {className}"
 		width="48"
 		height="48"
 		viewBox="0 0 512 512"
@@ -87,7 +87,7 @@
 
 {#snippet iconDragon()}
 	<svg
-		class="icon-type icon-type--Dragon {className}"
+		class="icon icon--svg icon--Dragon {className}"
 		width="48"
 		height="48"
 		viewBox="0 0 512 512"
@@ -105,7 +105,7 @@
 
 {#snippet iconElectric()}
 	<svg
-		class="icon-type icon-type--Electric {className}"
+		class="icon icon--svg icon--Electric {className}"
 		width="48"
 		height="48"
 		viewBox="0 0 512 512"
@@ -123,7 +123,7 @@
 
 {#snippet iconFairy()}
 	<svg
-		class="icon-type icon-type--Fairy {className}"
+		class="icon icon--svg icon--Fairy {className}"
 		width="48"
 		height="48"
 		viewBox="0 0 512 512"
@@ -141,7 +141,7 @@
 
 {#snippet iconFighting()}
 	<svg
-		class="icon-type icon-type--Fighting {className}"
+		class="icon icon--svg icon--Fighting {className}"
 		width="48"
 		height="48"
 		viewBox="0 0 512 512"
@@ -159,7 +159,7 @@
 
 {#snippet iconFire()}
 	<svg
-		class="icon-type icon-type--Fire {className}"
+		class="icon icon--svg icon--Fire {className}"
 		width="48"
 		height="48"
 		viewBox="0 0 512 512"
@@ -177,7 +177,7 @@
 
 {#snippet iconFlying()}
 	<svg
-		class="icon-type icon-type--Flying {className}"
+		class="icon icon--svg icon--Flying {className}"
 		width="48"
 		height="48"
 		viewBox="0 0 512 512"
@@ -195,7 +195,7 @@
 
 {#snippet iconGhost()}
 	<svg
-		class="icon-type icon-type--Ghost {className}"
+		class="icon icon--svg icon--Ghost {className}"
 		width="48"
 		height="48"
 		viewBox="0 0 512 512"
@@ -213,7 +213,7 @@
 
 {#snippet iconGrass()}
 	<svg
-		class="icon-type icon-type--Grass {className}"
+		class="icon icon--svg icon--Grass {className}"
 		fill="none"
 		height="48"
 		width="48"
@@ -230,7 +230,7 @@
 
 {#snippet iconGround()}
 	<svg
-		class="icon-type icon-type--Ground {className}"
+		class="icon icon--svg icon--Ground {className}"
 		width="48"
 		height="48"
 		viewBox="0 0 512 512"
@@ -248,7 +248,7 @@
 
 {#snippet iconIce()}
 	<svg
-		class="icon-type icon-type--Ice {className}"
+		class="icon icon--svg icon--Ice {className}"
 		width="48"
 		height="48"
 		viewBox="0 0 512 512"
@@ -296,7 +296,7 @@
 
 {#snippet iconNormal()}
 	<svg
-		class="icon-type icon-type--Normal {className}"
+		class="icon icon--svg icon--Normal {className}"
 		width="48"
 		height="48"
 		viewBox="0 0 512 512"
@@ -314,7 +314,7 @@
 
 {#snippet iconPoison()}
 	<svg
-		class="icon-type icon-type--Poison {className}"
+		class="icon icon--svg icon--Poison {className}"
 		width="48"
 		height="48"
 		viewBox="0 0 512 512"
@@ -332,7 +332,7 @@
 
 {#snippet iconPsychic()}
 	<svg
-		class="icon-type icon-type--Psychic {className}"
+		class="icon icon--svg icon--Psychic {className}"
 		width="48"
 		height="48"
 		viewBox="0 0 512 512"
@@ -350,7 +350,7 @@
 
 {#snippet iconRock()}
 	<svg
-		class="icon-type icon-type--Rock {className}"
+		class="icon icon--svg icon--Rock {className}"
 		width="48"
 		height="48"
 		viewBox="0 0 512 512"
@@ -368,7 +368,7 @@
 
 {#snippet iconSteel()}
 	<svg
-		class="icon-type icon-type--Steel {className}"
+		class="icon icon--svg icon--Steel {className}"
 		width="48"
 		height="48"
 		viewBox="0 0 512 512"
@@ -386,7 +386,7 @@
 
 {#snippet iconWater()}
 	<svg
-		class="icon-type icon-type--Water {className}"
+		class="icon icon--svg icon--Water {className}"
 		width="48"
 		height="48"
 		viewBox="0 0 512 512"

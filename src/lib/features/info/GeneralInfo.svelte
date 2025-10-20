@@ -15,8 +15,8 @@
 			<div class="tile__content text-h5">
 				<p>Grass, Poison</p>
 			</div>
-			<PokemonTypeIcon className={'tile__icon tile__icon--type'} pokemonType="Grass" />
-			<PokemonTypeIcon className={'tile__icon tile__icon--type'} pokemonType="Poison" />
+			<PokemonTypeIcon className="tile__icon" pokemonType="Grass" />
+			<PokemonTypeIcon className="tile__icon" pokemonType="Poison" />
 		</div>
 
 		<div class="tile tile--3 card">
@@ -24,8 +24,8 @@
 			<div class="tile__content text-h5">
 				<p>6.9 kg,<br /> 0.7 m</p>
 			</div>
-			<i class="tile__icon ri-weight-line"></i>
-			<i class="tile__icon ri-ruler-line"></i>
+			<i class="tile__icon icon icon--remix ri-weight-line"></i>
+			<i class="tile__icon icon icon--remix ri-ruler-line"></i>
 		</div>
 
 		<div class="tile tile--4 card">
@@ -33,7 +33,7 @@
 			<div class="tile__content text-h5">
 				<p>Seed Pokémon</p>
 			</div>
-			<i class="tile__icon ri-dna-line"></i>
+			<i class="tile__icon icon icon--remix ri-dna-line"></i>
 		</div>
 
 		<div class="tile tile--5 card">
@@ -41,8 +41,8 @@
 			<div class="tile__content text-h5">
 				<p>87.5 : 12.5</p>
 			</div>
-			<i class="tile__icon ri-women-line"></i>
-			<i class="tile__icon ri-men-line"></i>
+			<i class="tile__icon icon icon--remix ri-women-line"></i>
+			<i class="tile__icon icon icon--remix ri-men-line"></i>
 		</div>
 
 		<div class="tile tile--6 card">
@@ -53,8 +53,8 @@
 					up the sun’s rays, the seed grows progressively larger.
 				</p>
 			</div>
-			<i class="tile__icon ri-double-quotes-l"></i>
-			<i class="tile__icon ri-double-quotes-r"></i>
+			<i class="tile__icon icon icon--remix ri-double-quotes-l"></i>
+			<i class="tile__icon icon icon--remix ri-double-quotes-r"></i>
 		</div>
 	</div>
 </section>
@@ -132,18 +132,16 @@
 		margin-top: 0.5rem;
 	}
 
+	.tile :global(.icon) {
+		--size: 2rem;
+		--color: black;
+	}
+
 	:global(.tile__icon) {
-		font-size: 2rem;
 		position: absolute;
 		top: 0.25rem;
 		right: 0.25rem;
-		color: black;
 		opacity: 0.15;
-	}
-
-	:global(.tile__icon--type) {
-		height: 2rem;
-		width: 2rem;
 	}
 
 	:global(.tile__icon:nth-of-type(2)) {
