@@ -21,10 +21,10 @@
 
 	type Props = {
 		pokemonType: PokemonType;
-		className: string;
+		className?: string;
 	};
 
-	const { pokemonType, className }: Props = $props();
+	const { pokemonType, className = '' }: Props = $props();
 
 	const pokemonTypeIconMap = {
 		Bug: iconBug,
