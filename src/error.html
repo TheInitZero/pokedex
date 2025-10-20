@@ -4,12 +4,37 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Error: %sveltekit.status%</title>
+
+		<style>
+			.error {
+				border: 2px solid black;
+				padding: 1em;
+				border-radius: 1em;
+				margin: 1em auto 0 auto;
+				max-width: fit-content;
+				text-align: center;
+			}
+
+			.error__message {
+				margin-top: 0.5rem;
+			}
+
+			.error__link {
+				margin-top: 0.5rem;
+				display: inline-block;
+				padding: 0.5em;
+				border: 2px solid black;
+				border-radius: 0.5em;
+				background-color: black;
+				color: white;
+			}
+		</style>
 	</head>
 	<body>
-		<section aria-labelledby="error-section-heading">
-			<h1 id="error-section-heading">Error: %sveltekit.status%</h1>
-			<p>%sveltekit.error.message%</p>
-			<a href="/">Go back to home page</a>
+		<section class="error" aria-labelledby="error-section-heading">
+			<h1 class="error__title" id="error-section-heading">Error: %sveltekit.status%</h1>
+			<p class="error__message">%sveltekit.error.message%</p>
+			<a class="error__link" href="/">Go back to home page</a>
 		</section>
 	</body>
 </html>
