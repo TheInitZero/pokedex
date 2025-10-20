@@ -464,13 +464,18 @@ https://serp.co/tools/css-reset/
 }
 
 @layer components {
-	.skip-link {
+	.button {
+		--padding-vertical: 0.5em;
+		--padding-horizontal: 0.5em;
 		display: inline-block;
-		padding: 0.5em;
+		padding: var(--padding-vertical) var(--padding-horizontal);
 		border: 2px solid black;
 		border-radius: 0.5em;
 		background-color: black;
 		color: white;
+	}
+
+	.skip-link {
 		position: absolute;
 		left: -10000px;
 		top: auto;

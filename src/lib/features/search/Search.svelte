@@ -91,12 +91,7 @@
 	.button {
 		display: flex;
 		align-items: center;
-		gap: 0.5rem;
 		justify-content: center;
-		padding: 0.5em;
-		border: 2px solid black;
-		border-radius: 0.5em;
-		background-color: black;
-		color: white;
+		gap: 0.5rem;
 	}
 </style>

@@ -7,10 +7,7 @@
 	.button {
 		display: grid;
 		place-content: center;
-		padding: 0.75em 0.5em;
-		border: 2px solid black;
-		border-radius: 0.5em;
-		background-color: black;
+		--padding-vertical: 0.75em;
 	}
 
 	.icon {

@@ -3,11 +3,11 @@
 </script>
 
 <ul class="type-list" aria-label="Bulbasaur belongs to the types:">
-	<li class="type-list__item">
+	<li class="type-list__item button">
 		<PokemonTypeIcon pokemonType="Grass" />
 		<span class="type-list__name">Grass</span>
 	</li>
-	<li class="type-list__item">
+	<li class="type-list__item button">
 		<PokemonTypeIcon pokemonType="Poison" />
 		<span class="type-list__name">Poison</span>
 	</li>
@@ -22,10 +22,6 @@
 	}
 
 	.type-list__item {
-		background-color: black;
-		color: white;
-		padding: 0.5em;
-		border-radius: 0.5em;
 		display: flex;
 		align-items: center;
 		gap: 0.5rem;

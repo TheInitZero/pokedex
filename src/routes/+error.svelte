@@ -6,7 +6,7 @@
 	<h2 class="error__title" id="error-section-heading">Error: {page.status}</h2>
 	<img class="error__image" src="/assets/images/404.png" alt="" height="160" width="160" />
 	<p class="error__message">{page.error?.message ?? 'Something went wrong'}</p>
-	<a class="error__link" href="/">Go back to home page</a>
+	<a class="error__link button" href="/">Go back to home page</a>
 </section>
 
 <style>
@@ -25,11 +25,5 @@
 
 	.error__link {
 		margin-top: 0.5rem;
-		display: inline-block;
-		padding: 0.5em;
-		border: 2px solid black;
-		border-radius: 0.5em;
-		background-color: black;
-		color: white;
 	}
 </style>
