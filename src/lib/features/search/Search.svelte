@@ -50,11 +50,31 @@
 	.form {
 		display: grid;
 		gap: 1.5rem;
+
+		@media (min-width: 475px) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@media (min-width: 768px) {
+			grid-template-columns: 2fr 2fr 1fr;
+		}
 	}
 
 	.form__group {
 		display: grid;
 		gap: 0.5rem;
+	}
+
+	.form__group--3 {
+		@media (min-width: 475px) {
+			grid-column: span 2;
+		}
+
+		@media (min-width: 768px) {
+			grid-column: span 1;
+			justify-items: stretch;
+			align-items: end;
+		}
 	}
 
 	.icon {
@@ -78,27 +98,5 @@
 		border-radius: 0.5em;
 		background-color: black;
 		color: white;
-	}
-
-	@media (min-width: 475px) {
-		.form {
-			grid-template-columns: repeat(2, 1fr);
-		}
-
-		.form__group--3 {
-			grid-column: span 2;
-		}
-	}
-
-	@media (min-width: 768px) {
-		.form {
-			grid-template-columns: 2fr 2fr 1fr;
-		}
-
-		.form__group--3 {
-			grid-column: span 1;
-			justify-items: stretch;
-			align-items: end;
-		}
 	}
 </style>
