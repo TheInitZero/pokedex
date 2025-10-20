@@ -408,7 +408,7 @@ https://serp.co/tools/css-reset/
 		line-height: var(--line-height);
 	}
 
-	:is(
+	:where(
 		a[href]:not([tabindex='-1']),
 		area[href]:not([tabindex='-1']),
 		input:not([disabled]):not([tabindex='-1']),
