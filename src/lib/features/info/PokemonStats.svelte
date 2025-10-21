@@ -1,4 +1,4 @@
-<section class="section" aria-labelledby="stats-section-heading">
+<section class="flow" aria-labelledby="stats-section-heading">
 	<h3 id="stats-section-heading">Stats</h3>
 
 	<ul class="stats" aria-labelledby="stats-section-heading">
@@ -36,12 +36,7 @@
 </section>
 
 <style>
-	.section {
-		margin-top: 1em;
-	}
-
 	.stats {
-		margin-top: 1em;
 		display: grid;
 		gap: 1rem;
 		grid-template-columns: repeat(2, 1fr);
@@ -58,7 +53,7 @@
 	}
 
 	.stat__point {
-		margin-top: 0.5rem;
+		margin-top: 0.5em;
 	}
 
 	.stat__icon {

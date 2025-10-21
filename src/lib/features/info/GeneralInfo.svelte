@@ -2,7 +2,7 @@
 	import PokemonTypeIcon from './PokemonTypeIcon.svelte';
 </script>
 
-<section class="section" aria-labelledby="general-info-section-heading">
+<section class="flow" aria-labelledby="general-info-section-heading">
 	<h3 id="general-info-section-heading">General Info</h3>
 
 	<div class="tiles">
@@ -60,12 +60,7 @@
 </section>
 
 <style>
-	.section {
-		margin-top: 1em;
-	}
-
 	.tiles {
-		margin-top: 1em;
 		display: grid;
 		gap: 1rem;
 		grid-template-rows: repeat(6, minmax(8rem, auto));
@@ -129,7 +124,7 @@
 	}
 
 	.tile__content {
-		margin-top: 0.5rem;
+		margin-top: 0.5em;
 	}
 
 	.tile :global(.icon) {

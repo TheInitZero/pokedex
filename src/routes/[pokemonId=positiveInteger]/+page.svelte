@@ -7,14 +7,8 @@
 	<title>Bulbasaur | Pokédex</title>
 </svelte:head>
 
-<h2 class="title">Bulbasaur</h2>
+<h2>Bulbasaur</h2>
 
 <GeneralInfo />
 
 <PokemonStats />
-
-<style>
-	.title {
-		margin-top: 1em;
-	}
-</style>

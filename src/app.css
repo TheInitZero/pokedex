@@ -582,4 +582,8 @@ https://serp.co/tools/css-reset/
 			max-width: 1536px;
 		}
 	}
+
+	.flow > * + * {
+		margin-top: 1em;
+	}
 }

@@ -16,7 +16,6 @@
 	}
 
 	.pagination {
-		margin-top: 2em;
 		display: grid;
 		place-content: center;
 	}

@@ -17,7 +17,6 @@
 		justify-content: center;
 		flex-wrap: wrap;
 		gap: 1rem;
-		margin-top: 2em;
 	}
 
 	.list__item {
