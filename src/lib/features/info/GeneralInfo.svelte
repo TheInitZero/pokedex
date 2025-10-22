@@ -7,7 +7,7 @@
 
 	<div class="tiles">
 		<div class="tile tile--1 card">
-			<img class="tile__image" src="/assets/images/001.png" alt="" height="240" width="240" />
+			<img class="tile__image" src="/assets/images/001.png" alt="" />
 		</div>
 
 		<div class="tile tile--2 card">
@@ -82,7 +82,7 @@
 
 	.tile--1 {
 		display: grid;
-		place-content: center;
+		place-items: center;
 
 		@media (min-width: 475px) {
 			grid-column: span 2;
@@ -114,12 +114,10 @@
 	}
 
 	.tile__image {
-		height: 10rem;
-		width: 10rem;
+		max-width: 80%;
 
-		@media (min-width: 640px) {
-			height: 15rem;
-			width: 15rem;
+		@media (min-width: 768px) {
+			max-width: 100%;
 		}
 	}
 
