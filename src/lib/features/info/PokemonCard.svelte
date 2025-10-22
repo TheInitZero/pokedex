@@ -1,43 +1,68 @@
 <script>
-	import PokemonProfile from './PokemonProfile.svelte';
-	import PokemonTypes from './PokemonTypes.svelte';
+	import PokemonTypeIcon from './PokemonTypeIcon.svelte';
 </script>
 
 <article class="card" aria-labelledby="pokemon-name-1">
-	<div class="card__group card__group--1">
-		<h2 class="text-h6 card__heading" id="pokemon-name-1">
-			<a href="/1">Bulbasaur</a>
-		</h2>
+	<img class="card__image" src="/assets/images/001.png" alt="" height="284" width="284" />
 
-		<PokemonTypes />
+	<h2 class="card__heading text-h3" id="pokemon-name-1">
+		<a href="/1">Bulbasaur</a>
+	</h2>
 
-		<PokemonProfile />
+	<p class="sr-only">Bulbasaur belongs to the types:</p>
+
+	<div class="card__group button">
+		<PokemonTypeIcon pokemonType="Grass" />
+		<span>Fighting</span>
 	</div>
 
-	<div class="card__group card__group--2">
-		<img src="/assets/images/001.png" alt="" height="128" width="128" />
+	<div class="card__group button">
+		<PokemonTypeIcon pokemonType="Poison" />
+		<span>Fighting</span>
+	</div>
+
+	<p class="sr-only">Bulbasaur's profile:</p>
+
+	<div class="card__group" aria-label="Weight">
+		<i class="icon icon--remix ri-weight-line"></i>
+		<span>6.9 kg</span>
+	</div>
+
+	<div class="card__group" aria-label="Height">
+		<i class="icon icon--remix ri-ruler-line"></i>
+		<span>0.7 m</span>
 	</div>
 </article>
 
 <style>
 	.card {
-		display: flex;
-		flex-direction: column-reverse;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		justify-items: center;
 		gap: 0.5rem;
-		width: 240px;
+		max-width: 320px;
+	}
+
+	.card__image {
+		grid-column: span 2;
 	}
 
 	.card__heading {
-		text-align: center;
+		grid-column: span 2;
 	}
 
-	.card__group--1 {
-		display: grid;
+	.card__group {
+		display: flex;
+		align-items: center;
 		gap: 0.5rem;
+		font-weight: bold;
 	}
 
-	.card__group--2 {
-		display: grid;
-		place-items: center;
+	.icon {
+		--color: black;
+	}
+
+	.card__group :global(.icon) {
+		--size: 1.5rem;
 	}
 </style>
