@@ -39,7 +39,7 @@
 	</div>
 
 	<div class="form__group form__group--3">
-		<button class="button" type="submit">
+		<button class="button form__button" type="submit">
 			<span>Search</span>
 			<i class="icon icon--remix ri-search-line"></i>
 		</button>
@@ -84,7 +84,7 @@
 		border-radius: 0.5em;
 	}
 
-	.button {
+	.form__button {
 		display: flex;
 		align-items: center;
 		justify-content: center;
