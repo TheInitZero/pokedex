@@ -30,43 +30,46 @@
 		<a href="/{pokemon.id}">{pokemon.name}</a>
 	</h2>
 
-	<p class="sr-only">{pokemon.name} belongs to the types:</p>
+	<ul class="card__type-list" aria-label="{pokemon.name} belongs to the types:">
+		{#each pokemon.type as pokemonType}
+			<li class="card__group button">
+				<PokemonTypeIcon {pokemonType} />
+				<span>{pokemonType}</span>
+			</li>
+		{/each}
+	</ul>
 
-	{#each pokemon.type as pokemonType}
-		<div class="card__group button">
-			<PokemonTypeIcon {pokemonType} />
-			<span>{pokemonType}</span>
+	<div class="card__profile" aria-label="{pokemon.name}'s profile:">
+		<div class="card__group" aria-label="Weight">
+			<i class="icon icon--remix ri-weight-line"></i>
+			<span>{pokemon.weight}</span>
 		</div>
-	{/each}
 
-	<p class="sr-only">{pokemon.name}'s profile:</p>
-
-	<div class="card__group" aria-label="Weight">
-		<i class="icon icon--remix ri-weight-line"></i>
-		<span>{pokemon.weight}</span>
-	</div>
-
-	<div class="card__group" aria-label="Height">
-		<i class="icon icon--remix ri-ruler-line"></i>
-		<span>{pokemon.height}</span>
+		<div class="card__group" aria-label="Height">
+			<i class="icon icon--remix ri-ruler-line"></i>
+			<span>{pokemon.height}</span>
+		</div>
 	</div>
 </article>
 
 <style>
 	.card {
 		display: grid;
-		grid-template-columns: repeat(2, 1fr);
 		justify-items: center;
 		gap: 0.5rem;
 		max-width: 320px;
 	}
 
-	.card__image {
-		grid-column: span 2;
+	.card__type-list,
+	.card__profile {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.5rem;
 	}
 
-	.card__heading {
-		grid-column: span 2;
+	.card__profile {
+		gap: 1rem;
 	}
 
 	.card__group {
