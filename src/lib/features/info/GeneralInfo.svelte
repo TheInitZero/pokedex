@@ -1,5 +1,12 @@
-<script>
+<script lang="ts">
 	import PokemonTypeIcon from './PokemonTypeIcon.svelte';
+	import { getImageFileName, type Pokemon } from '$lib/index';
+
+	type Props = {
+		pokemon: Pokemon;
+	};
+
+	const { pokemon }: Props = $props();
 </script>
 
 <section class="flow" aria-labelledby="general-info-section-heading">
@@ -7,22 +14,26 @@
 
 	<div class="tiles">
 		<div class="tile tile--1 card">
-			<img class="tile__image" src="/assets/images/001.png" alt="" />
+			<img class="tile__image" src="/assets/images/{getImageFileName(pokemon.id)}.png" alt="" />
 		</div>
 
 		<div class="tile tile--2 card">
 			<h4 class="tile__heading text-base">Types</h4>
 			<div class="tile__content text-h5">
-				<p>Grass, Poison</p>
+				<p>{pokemon.type.join(', ')}</p>
 			</div>
-			<PokemonTypeIcon className="tile__icon" pokemonType="Grass" />
-			<PokemonTypeIcon className="tile__icon" pokemonType="Poison" />
+			{#each pokemon.type as pokemonType}
+				<PokemonTypeIcon className="tile__icon" {pokemonType} />
+			{/each}
 		</div>
 
 		<div class="tile tile--3 card">
 			<h4 class="tile__heading text-base">Profile</h4>
 			<div class="tile__content text-h5">
-				<p>6.9 kg,<br /> 0.7 m</p>
+				<p>
+					<span class="sr-only">Weight:</span>{pokemon.weight},<br />
+					<span class="sr-only">Height:</span>{pokemon.height}
+				</p>
 			</div>
 			<i class="tile__icon icon icon--remix ri-weight-line"></i>
 			<i class="tile__icon icon icon--remix ri-ruler-line"></i>
@@ -31,7 +42,7 @@
 		<div class="tile tile--4 card">
 			<h4 class="tile__heading text-base">Species</h4>
 			<div class="tile__content text-h5">
-				<p>Seed Pokémon</p>
+				<p>{pokemon.species}</p>
 			</div>
 			<i class="tile__icon icon icon--remix ri-dna-line"></i>
 		</div>
@@ -39,7 +50,7 @@
 		<div class="tile tile--5 card">
 			<h4 class="tile__heading text-base">Gender Ratio</h4>
 			<div class="tile__content text-h5">
-				<p>87.5 : 12.5</p>
+				<p>{pokemon.gender}</p>
 			</div>
 			<i class="tile__icon icon icon--remix ri-women-line"></i>
 			<i class="tile__icon icon icon--remix ri-men-line"></i>
@@ -48,10 +59,7 @@
 		<div class="tile tile--6 card">
 			<h4 class="tile__heading text-base">Description</h4>
 			<div class="tile__content text-h5">
-				<p>
-					Bulbasaur can be seen napping in bright sunlight. There is a seed on its back. By soaking
-					up the sun’s rays, the seed grows progressively larger.
-				</p>
+				<p>{pokemon.description}</p>
 			</div>
 			<i class="tile__icon icon icon--remix ri-double-quotes-l"></i>
 			<i class="tile__icon icon icon--remix ri-double-quotes-r"></i>

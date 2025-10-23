@@ -1,14 +1,18 @@
-<script>
+<script lang="ts">
+	import { page } from '$app/state';
+	import type { Pokemon } from '$lib';
 	import GeneralInfo from '$lib/features/info/GeneralInfo.svelte';
 	import PokemonStats from '$lib/features/info/PokemonStats.svelte';
+
+	const pokemon = $derived(page.data.pokemon) as Pokemon;
 </script>
 
 <svelte:head>
-	<title>Bulbasaur | Pokédex</title>
+	<title>{pokemon.name} | Pokédex</title>
 </svelte:head>
 
-<h2>Bulbasaur</h2>
+<h2>{pokemon.name}</h2>
 
-<GeneralInfo />
+<GeneralInfo {pokemon} />
 
-<PokemonStats />
+<PokemonStats {pokemon} />

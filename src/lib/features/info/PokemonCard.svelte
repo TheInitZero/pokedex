@@ -1,20 +1,12 @@
 <script lang="ts">
 	import PokemonTypeIcon from './PokemonTypeIcon.svelte';
-	import type { Pokemon } from '$lib/index';
+	import { getImageFileName, type Pokemon } from '$lib/index';
 
 	type Props = {
 		pokemon: Pokemon;
 	};
 
 	const { pokemon }: Props = $props();
-
-	function getImageFileName(pokemonId: number): string {
-		const pokemonIdStringified = String(pokemonId);
-
-		if (pokemonIdStringified.length == 1) return `00${pokemonId}`;
-		if (pokemonIdStringified.length == 2) return `0${pokemonId}`;
-		return pokemonIdStringified;
-	}
 </script>
 
 <article class="card" aria-labelledby="pokemon-name-1">

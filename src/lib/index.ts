@@ -34,3 +34,11 @@ export type Pokemon = {
 	weight: string;
 	gender: string;
 };
+
+export function getImageFileName(pokemonId: number): string {
+	const pokemonIdStringified = String(pokemonId);
+
+	if (pokemonIdStringified.length == 1) return `00${pokemonId}`;
+	if (pokemonIdStringified.length == 2) return `0${pokemonId}`;
+	return pokemonIdStringified;
+}
