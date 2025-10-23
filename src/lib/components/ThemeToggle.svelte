@@ -1,6 +1,32 @@
-<button class="button" aria-pressed="false" aria-label="Dark Theme">
-	<!-- <i class="icon icon--remix ri-sun-fill"></i> -->
-	<i class="icon icon--remix ri-moon-fill"></i>
+<script lang="ts">
+	import { untrack } from 'svelte';
+	let theme = $state<'light' | 'dark'>('light');
+
+	$effect(function onMount() {
+		untrack(() => theme);
+
+		const storedTheme = localStorage.getItem('theme');
+
+		if (storedTheme == 'light' || storedTheme == 'dark') {
+			theme = storedTheme;
+		} else {
+			theme = 'light';
+			localStorage.setItem('theme', 'light');
+		}
+	});
+
+	$effect(function sideEffects() {
+		document.documentElement.dataset.theme = theme;
+		localStorage.setItem('theme', theme);
+	});
+
+	function toggle() {
+		theme = theme == 'light' ? 'dark' : 'light';
+	}
+</script>
+
+<button onclick={toggle} class="button" aria-pressed={theme == 'dark'} aria-label="Dark Theme">
+	<i class="icon icon--remix {theme == 'light' ? 'ri-moon-fill' : 'ri-sun-fill'}"></i>
 </button>
 
 <style>
