@@ -61,18 +61,22 @@
 
 <style>
 	.tiles {
+		--num-cols: 1;
+		--num-rows: 6;
+
 		display: grid;
 		gap: 1rem;
-		grid-template-rows: repeat(6, minmax(8rem, auto));
+		grid-template-columns: repeat(var(--num-cols), 1fr);
+		grid-template-rows: repeat(var(--num-rows), minmax(8rem, auto));
 
 		@media (min-width: 475px) {
-			grid-template-columns: repeat(2, 1fr);
-			grid-template-rows: repeat(4, minmax(8rem, auto));
+			--num-cols: 2;
+			--num-rows: 4;
 		}
 
 		@media (min-width: 768px) {
-			grid-template-columns: repeat(3, 1fr);
-			grid-template-rows: repeat(3, minmax(8rem, auto));
+			--num-cols: 3;
+			--num-rows: 3;
 		}
 	}
 
