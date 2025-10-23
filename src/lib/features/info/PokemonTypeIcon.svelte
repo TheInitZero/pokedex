@@ -1,23 +1,5 @@
 <script lang="ts">
-	type PokemonType =
-		| 'Bug'
-		| 'Dark'
-		| 'Dragon'
-		| 'Electric'
-		| 'Fairy'
-		| 'Fighting'
-		| 'Fire'
-		| 'Flying'
-		| 'Ghost'
-		| 'Grass'
-		| 'Ground'
-		| 'Ice'
-		| 'Normal'
-		| 'Poison'
-		| 'Psychic'
-		| 'Rock'
-		| 'Steel'
-		| 'Water';
+	import type { PokemonType } from '$lib';
 
 	type Props = {
 		pokemonType: PokemonType;

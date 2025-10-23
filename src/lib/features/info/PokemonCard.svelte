@@ -1,36 +1,54 @@
-<script>
+<script lang="ts">
 	import PokemonTypeIcon from './PokemonTypeIcon.svelte';
+	import type { Pokemon } from '$lib/index';
+
+	type Props = {
+		pokemon: Pokemon;
+	};
+
+	const { pokemon }: Props = $props();
+
+	function getImageFileName(pokemonId: number): string {
+		const pokemonIdStringified = String(pokemonId);
+
+		if (pokemonIdStringified.length == 1) return `00${pokemonId}`;
+		if (pokemonIdStringified.length == 2) return `0${pokemonId}`;
+		return pokemonIdStringified;
+	}
 </script>
 
 <article class="card" aria-labelledby="pokemon-name-1">
-	<img class="card__image" src="/assets/images/001.png" alt="" height="284" width="284" />
+	<img
+		class="card__image"
+		src="/assets/images/{getImageFileName(pokemon.id)}.png"
+		alt=""
+		height="284"
+		width="284"
+	/>
 
 	<h2 class="card__heading text-h3" id="pokemon-name-1">
-		<a href="/1">Bulbasaur</a>
+		<a href="/{pokemon.id}">{pokemon.name}</a>
 	</h2>
 
-	<p class="sr-only">Bulbasaur belongs to the types:</p>
+	<p class="sr-only">{pokemon.name} belongs to the types:</p>
 
-	<div class="card__group button">
-		<PokemonTypeIcon pokemonType="Grass" />
-		<span>Fighting</span>
-	</div>
+	{#each pokemon.type as pokemonType}
+		<div class="card__group button">
+			<PokemonTypeIcon {pokemonType} />
+			<span>{pokemonType}</span>
+		</div>
+	{/each}
 
-	<div class="card__group button">
-		<PokemonTypeIcon pokemonType="Poison" />
-		<span>Fighting</span>
-	</div>
-
-	<p class="sr-only">Bulbasaur's profile:</p>
+	<p class="sr-only">{pokemon.name}'s profile:</p>
 
 	<div class="card__group" aria-label="Weight">
 		<i class="icon icon--remix ri-weight-line"></i>
-		<span>6.9 kg</span>
+		<span>{pokemon.weight}</span>
 	</div>
 
 	<div class="card__group" aria-label="Height">
 		<i class="icon icon--remix ri-ruler-line"></i>
-		<span>0.7 m</span>
+		<span>{pokemon.height}</span>
 	</div>
 </article>
 

@@ -1,11 +1,18 @@
-<script>
+<script lang="ts">
+	import type { Pokemon } from '$lib/index';
 	import PokemonCard from './PokemonCard.svelte';
+
+	type Props = {
+		pokemons: Pokemon[];
+	};
+
+	const { pokemons }: Props = $props();
 </script>
 
 <ul class="list">
-	{#each { length: 12 }, index (index)}
+	{#each pokemons as pokemon (pokemon.id)}
 		<li class="list__item">
-			<PokemonCard />
+			<PokemonCard {pokemon} />
 		</li>
 	{/each}
 </ul>
