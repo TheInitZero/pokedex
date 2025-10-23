@@ -37,12 +37,13 @@
 
 <style>
 	.stats {
+		--num-cols: 2;
 		display: grid;
 		gap: 1rem;
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: repeat(var(--num-cols), 1fr);
 
 		@media (min-width: 768px) {
-			grid-template-columns: repeat(3, 1fr);
+			--num-cols: 3;
 		}
 	}
 
