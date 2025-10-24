@@ -15,8 +15,12 @@
 	})();
 </script>
 
-<Search />
+<section class="card" aria-label="Search">
+	<Search />
+</section>
 
-<PokemonCardGrid pokemons={sampleData} />
+<section aria-label="Pokemon cards">
+	<PokemonCardGrid pokemons={sampleData} />
+</section>
 
 <Pagination />
