@@ -2,6 +2,7 @@
 	import { getPokemomById } from '$lib/data/db';
 	import PokemonCardGrid from '$lib/features/info/PokemonCardGrid.svelte';
 	import Pagination from '$lib/features/pagination/Pagination.svelte';
+	import Search from '$lib/features/search/Search.svelte';
 
 	const sampleData = (function () {
 		const data = [];
@@ -13,6 +14,8 @@
 		return data;
 	})();
 </script>
+
+<Search />
 
 <PokemonCardGrid pokemons={sampleData} />
 
