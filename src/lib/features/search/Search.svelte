@@ -1,5 +1,8 @@
-<script>
-	const pokemonTypes = [
+<script lang="ts">
+	import type { PokemonType } from '$lib';
+
+	const pokemonTypes: PokemonType[] = [
+		'All',
 		'Normal',
 		'Fire',
 		'Water',
@@ -30,8 +33,6 @@
 	<div class="form__group form__group--2">
 		<label for="search-type">Type:</label>
 		<select class="select" name="search-type" id="search-type">
-			<option value="All">All</option>
-
 			{#each pokemonTypes as pokemonType}
 				<option value={pokemonType}>{pokemonType}</option>
 			{/each}
