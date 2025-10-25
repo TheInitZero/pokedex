@@ -7,11 +7,21 @@ describe('searchMachine', () => {
 	test(`When 'SEARCH' event is sent, results are updated.`, () => {
 		const actor = createActor(searchMachine);
 		actor.start();
-		expect(actor.getSnapshot().context.results.length).toBe(db.getIds('All').length);
+
+		let snapshot = actor.getSnapshot();
+		expect(snapshot.context.results.length).toBe(db.getIds('All').length);
+
 		actor.send({ type: 'SEARCH', payload: { pokemonName: '', pokemonType: 'Grass' } });
-		expect(actor.getSnapshot().context.results.length).toBe(db.getIds('Grass').length);
+
+		snapshot = actor.getSnapshot();
+		expect(snapshot.context.results.length).toBe(db.getIds('Grass').length);
+
 		actor.send({ type: 'SEARCH', payload: { pokemonName: 'bulba', pokemonType: 'Grass' } });
-		expect(actor.getSnapshot().context.results.length).toBe(1);
-		expect(actor.getSnapshot().context.results[0].name).toBe('Bulbasaur');
+
+		snapshot = actor.getSnapshot();
+		expect(snapshot.context.results.length).toBe(1);
+		expect(snapshot.context.results[0].name).toBe('Bulbasaur');
+
+		actor.stop();
 	});
 });
