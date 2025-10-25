@@ -1,12 +1,44 @@
+<script lang="ts">
+	type Props = {
+		currentPage: number;
+		lastPage: number;
+		goToPrevPage: () => void;
+		goToNextPage: () => void;
+		prevButtonDisabled: boolean;
+		nextButtonDisabled: boolean;
+	};
+
+	const {
+		currentPage,
+		lastPage,
+		goToNextPage,
+		goToPrevPage,
+		prevButtonDisabled,
+		nextButtonDisabled
+	}: Props = $props();
+</script>
+
 <nav aria-label="Pagination" class="pagination">
 	<div class="pagination__group card">
-		<a class="pagination__link button" href="/" aria-label="Previous">
+		<button
+			disabled={prevButtonDisabled}
+			onclick={goToPrevPage}
+			class="pagination__link button"
+			aria-label="Previous"
+		>
 			<i class="icon icon--remix ri-arrow-left-line"></i>
-		</a>
-		<span>Page 12 of 100</span>
-		<a class="pagination__link button" href="/" aria-label="Next">
+		</button>
+
+		<span>Page {currentPage} of {lastPage}</span>
+
+		<button
+			disabled={nextButtonDisabled}
+			onclick={goToNextPage}
+			class="pagination__link button"
+			aria-label="Next"
+		>
 			<i class="icon icon--remix ri-arrow-right-line"></i>
-		</a>
+		</button>
 	</div>
 </nav>
 
