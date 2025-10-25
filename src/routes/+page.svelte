@@ -49,8 +49,12 @@
 <Pagination
 	currentPage={$paginationMachineSnapshot.context.currentPage}
 	lastPage={$paginationMachineSnapshot.context.lastPage}
-	goToPrevPage={() => paginationMachineSend({ type: 'PREV' })}
-	goToNextPage={() => paginationMachineSend({ type: 'NEXT' })}
+	goToPrevPage={function goToPrevPage() {
+		paginationMachineSend({ type: 'PREV' });
+	}}
+	goToNextPage={function goToNextPage() {
+		paginationMachineSend({ type: 'NEXT' });
+	}}
 	prevButtonDisabled={$paginationMachineSnapshot.context.currentPage <= 1}
 	nextButtonDisabled={$paginationMachineSnapshot.context.currentPage >=
 		$paginationMachineSnapshot.context.lastPage}

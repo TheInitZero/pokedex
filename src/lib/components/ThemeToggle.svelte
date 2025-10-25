@@ -3,7 +3,9 @@
 	let theme = $state<'light' | 'dark'>('light');
 
 	$effect(function onMount() {
-		untrack(() => theme);
+		untrack(function getTheme() {
+			return theme;
+		});
 
 		const storedTheme = localStorage.getItem('theme');
 

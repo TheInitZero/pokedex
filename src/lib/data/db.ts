@@ -9,7 +9,9 @@ function getPokemonsByName(
 	pokemons: Pokemon[] = getPokemonsByType('All')
 ): Pokemon[] {
 	if (name.trim().length == 0) return pokemons;
-	return pokemons.filter((pokemon) => pokemon.name.toLowerCase().includes(name.toLowerCase()));
+	return pokemons.filter(function namesMatch(pokemon) {
+		return pokemon.name.toLowerCase().includes(name.toLowerCase());
+	});
 }
 
 function getPokemonsByType(pokemonType: PokemonType): Pokemon[] {
