@@ -473,6 +473,11 @@ https://serp.co/tools/css-reset/
 		border-radius: 0.5em;
 		background-color: black;
 		color: white;
+
+		&:disabled {
+			opacity: 50%;
+			cursor: not-allowed;
+		}
 	}
 
 	.skip-link {
