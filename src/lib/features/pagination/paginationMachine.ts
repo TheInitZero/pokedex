@@ -10,7 +10,7 @@ type PaginationMachineContext = {
 type PaginationMachineEvents =
 	| { type: 'NEXT' }
 	| { type: 'PREV' }
-	| { type: 'UPDATE_LAST_PAGE'; payload: { lastPage: number } };
+	| { type: 'SET_CONTEXT'; payload: { context: PaginationMachineContext } };
 
 export const paginationMachine = setup({
 	types: {
@@ -64,12 +64,10 @@ export const paginationMachine = setup({
 			guard: 'canGoToPrevPage',
 			actions: [{ type: 'goToPrevPage' }]
 		},
-		UPDATE_LAST_PAGE: {
+		SET_CONTEXT: {
 			actions: [
-				assign({
-					lastPage({ context, event }) {
-						return event.payload.lastPage;
-					}
+				assign(function setContext({ context, event }) {
+					return event.payload.context;
 				})
 			]
 		}

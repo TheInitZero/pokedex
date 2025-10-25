@@ -149,28 +149,32 @@ describe('paginationMachine', () => {
 		});
 	});
 
-	describe(`When 'UPDATE_LAST_PAGE' event is sent,`, () => {
-		test(`lastPage in machine's context is set to the lastPage in event payload.`, () => {
-			const actor = createActor(paginationMachine, {
-				input: {
-					currentPage: 1,
-					lastPage: 2,
-					cardsPerPage: 12,
-					sliceStartIndex: 0
-				}
-			});
+	describe(`When 'SET_CONTEXT' event is sent,`, () => {
+		test('context is set to the new context provided in payload.', () => {
+			const input = {
+				currentPage: 2,
+				lastPage: 2,
+				cardsPerPage: 12,
+				sliceStartIndex: 12
+			};
+
+			const actor = createActor(paginationMachine, { input });
 
 			actor.start();
 
 			let snapshot = actor.getSnapshot();
-			expect(snapshot.context.lastPage).toBe(2);
+			expect(snapshot.context).toEqual(input);
 
-			actor.send({ type: 'UPDATE_LAST_PAGE', payload: { lastPage: 12 } });
+			const newContext = {
+				currentPage: 1,
+				lastPage: 42,
+				cardsPerPage: 16,
+				sliceStartIndex: 0
+			};
+			actor.send({ type: 'SET_CONTEXT', payload: { context: newContext } });
 
 			snapshot = actor.getSnapshot();
-			expect(snapshot.context.lastPage).toBe(12);
-
-			actor.stop();
+			expect(snapshot.context).toEqual(newContext);
 		});
 	});
 });

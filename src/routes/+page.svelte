@@ -26,8 +26,15 @@
 
 	$effect(function onSearchResultsUpdate() {
 		paginationMachineSend({
-			type: 'UPDATE_LAST_PAGE',
-			payload: { lastPage: Math.ceil(searchResults.length / 12) }
+			type: 'SET_CONTEXT',
+			payload: {
+				context: {
+					currentPage: 1,
+					lastPage: Math.ceil(searchResults.length / 12),
+					cardsPerPage: 12,
+					sliceStartIndex: 0
+				}
+			}
 		});
 	});
 </script>
