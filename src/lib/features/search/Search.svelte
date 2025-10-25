@@ -1,6 +1,10 @@
 <script lang="ts">
 	import type { PokemonType } from '$lib';
 
+	type Props = {
+		sendEvent(pokemonName: string, pokemonType: PokemonType): void;
+	};
+
 	const pokemonTypes: PokemonType[] = [
 		'All',
 		'Normal',
@@ -22,9 +26,21 @@
 		'Dark',
 		'Fairy'
 	];
+
+	const { sendEvent }: Props = $props();
 </script>
 
-<form role="search" class="form">
+<form
+	onsubmit={function handleSubmit(event) {
+		event.preventDefault();
+		const formData = new FormData(event.currentTarget);
+		const pokemonName = formData.get('search-name')?.toString() ?? '';
+		const pokemonType = (formData.get('search-type')?.toString() ?? 'All') as PokemonType;
+		sendEvent(pokemonName, pokemonType);
+	}}
+	role="search"
+	class="form"
+>
 	<div class="form__group form__group--1">
 		<label for="search-name">Name:</label>
 		<input class="input" type="text" name="search-name" id="search-name" />
