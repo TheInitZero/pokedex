@@ -25,7 +25,7 @@
 	<ul class="card__type-list" aria-label="{pokemon.name} belongs to the types:">
 		{#each pokemon.type as pokemonType}
 			<li class="card__group button">
-				<PokemonTypeIcon {pokemonType} />
+				<PokemonTypeIcon {pokemonType} --size="1.5rem" />
 				<span>{pokemonType}</span>
 			</li>
 		{/each}

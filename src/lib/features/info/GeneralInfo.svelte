@@ -22,8 +22,12 @@
 			<div class="tile__content text-h5">
 				<p>{pokemon.type.join(', ')}</p>
 			</div>
-			{#each pokemon.type as pokemonType}
-				<PokemonTypeIcon className="tile__icon" {pokemonType} />
+			{#each pokemon.type as pokemonType, index}
+				<PokemonTypeIcon
+					className="tile__icon {index == 1 && 'tile__icon--2'}"
+					{pokemonType}
+					--size="2rem"
+				/>
 			{/each}
 		</div>
 
