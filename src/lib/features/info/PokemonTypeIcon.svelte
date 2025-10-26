@@ -26,11 +26,12 @@
 		Psychic: iconPsychic,
 		Rock: iconRock,
 		Steel: iconSteel,
-		Water: iconWater
+		Water: iconWater,
+		All: null
 	};
 </script>
 
-{@render pokemonTypeIconMap[pokemonType]()}
+{@render pokemonTypeIconMap[pokemonType]?.()}
 
 {#snippet iconBug()}
 	<svg
