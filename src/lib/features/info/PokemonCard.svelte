@@ -10,7 +10,7 @@
 	const { pokemon }: Props = $props();
 </script>
 
-<article class="card" aria-labelledby="pokemon-name-1">
+<article class="card" aria-labelledby="pokemon-name-{pokemon.id}">
 	<img
 		class="card__image"
 		src="/assets/images/{getImageFileName(pokemon.id)}.png"
@@ -19,7 +19,7 @@
 		width="284"
 	/>
 
-	<h2 class="card__heading text-h3" id="pokemon-name-1">
+	<h2 class="card__heading text-h3" id="pokemon-name-{pokemon.id}">
 		<a href="/{pokemon.id}">{pokemon.name}</a>
 	</h2>
 
