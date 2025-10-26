@@ -65,5 +65,6 @@
 
 	.button {
 		--padding-horizontal: 0.75em;
+		--background-color: var(--color-bg-light);
 	}
 </style>

@@ -16,43 +16,41 @@
 		<li class="stat card">
 			<h4 class="stat__heading text-base">HP</h4>
 			<p class="stat__point text-h5">{pokemon.hp ?? '?'}</p>
-			<!-- <i class="stat__icon icon icon--remix ri-heart-line"></i> -->
-			<RemixIcon className="stat__icon" name="ri-heart-line" --size="2rem" --color="black" />
+			<RemixIcon className="stat__icon" name="ri-heart-line" --size="2rem" />
 		</li>
 		<li class="stat card">
 			<h4 class="stat__heading text-base">Attack</h4>
 			<p class="stat__point text-h5">{pokemon.attack ?? '?'}</p>
-			<!-- <i class="stat__icon icon icon--remix ri-sword-line"></i> -->
-			<RemixIcon className="stat__icon" name="ri-sword-line" --size="2rem" --color="black" />
+			<RemixIcon className="stat__icon" name="ri-sword-line" --size="2rem" />
 		</li>
 		<li class="stat card">
 			<h4 class="stat__heading text-base">Defense</h4>
 			<p class="stat__point text-h5">{pokemon.defense ?? '?'}</p>
-			<!-- <i class="stat__icon icon icon--remix ri-shield-line"></i> -->
-			<RemixIcon className="stat__icon" name="ri-shield-line" --size="2rem" --color="black" />
+			<RemixIcon className="stat__icon" name="ri-shield-line" --size="2rem" />
 		</li>
 		<li class="stat card">
 			<h4 class="stat__heading text-base">Special Attack</h4>
 			<p class="stat__point text-h5">{pokemon['special attack'] ?? '?'}</p>
-			<!-- <i class="stat__icon icon icon--remix ri-sword-fill"></i> -->
-			<RemixIcon className="stat__icon" name="ri-sword-fill" --size="2rem" --color="black" />
+			<RemixIcon className="stat__icon" name="ri-sword-fill" --size="2rem" />
 		</li>
 		<li class="stat card">
 			<h4 class="stat__heading text-base">Special Defense</h4>
 			<p class="stat__point text-h5">{pokemon['special defense'] ?? '?'}</p>
-			<!-- <i class="stat__icon icon icon--remix ri-shield-fill"></i> -->
-			<RemixIcon className="stat__icon" name="ri-shield-fill" --size="2rem" --color="black" />
+			<RemixIcon className="stat__icon" name="ri-shield-fill" --size="2rem" />
 		</li>
 		<li class="stat card">
 			<h4 class="stat__heading text-base">Speed</h4>
 			<p class="stat__point text-h5">{pokemon.speed ?? '?'}</p>
-			<!-- <i class="stat__icon icon icon--remix ri-dashboard-3-line"></i> -->
-			<RemixIcon className="stat__icon" name="ri-dashboard-3-line" --size="2rem" --color="black" />
+			<RemixIcon className="stat__icon" name="ri-dashboard-3-line" --size="2rem" />
 		</li>
 	</ul>
 </section>
 
 <style>
+	.text-h5 {
+		--color: var(--color-text-muted);
+	}
+
 	.stats {
 		--num-cols: 2;
 		display: grid;
@@ -78,6 +76,6 @@
 		position: absolute;
 		bottom: 0.25rem;
 		right: 0.25rem;
-		opacity: 0.15;
+		opacity: 0.4;
 	}
 </style>

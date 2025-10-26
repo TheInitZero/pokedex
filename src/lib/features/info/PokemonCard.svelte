@@ -34,12 +34,12 @@
 
 	<div class="card__profile" aria-label="{pokemon.name}'s profile:">
 		<div class="card__group" aria-label="Weight">
-			<RemixIcon name="ri-weight-line" --size="1.5rem" --color="black" />
+			<RemixIcon name="ri-weight-line" --size="1.5rem" />
 			<span>{pokemon.weight}</span>
 		</div>
 
 		<div class="card__group" aria-label="Height">
-			<RemixIcon name="ri-ruler-line" --size="1.5rem" --color="black" />
+			<RemixIcon name="ri-ruler-line" --size="1.5rem" />
 			<span>{pokemon.height}</span>
 		</div>
 	</div>

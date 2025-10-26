@@ -11,7 +11,7 @@
 
 <style>
 	.icon {
-		color: var(--color, white);
+		color: var(--color, --color-text-muted);
 		font-size: var(--size, 1rem);
 	}
 </style>

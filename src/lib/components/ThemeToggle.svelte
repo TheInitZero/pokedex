@@ -29,7 +29,11 @@
 </script>
 
 <button onclick={toggle} class="button" aria-pressed={theme == 'dark'} aria-label="Dark Theme">
-	<RemixIcon name={theme == 'light' ? 'ri-moon-fill' : 'ri-sun-fill'} --size="1.5rem" />
+	<RemixIcon
+		name={theme == 'light' ? 'ri-moon-fill' : 'ri-sun-fill'}
+		--size="1.5rem"
+		--color="var(--color-text)"
+	/>
 </button>
 
 <style>

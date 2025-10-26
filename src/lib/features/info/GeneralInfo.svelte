@@ -40,12 +40,11 @@
 					<span class="sr-only">Height:</span>{pokemon.height}
 				</p>
 			</div>
-			<RemixIcon className="tile__icon" name="ri-weight-line" --size="2rem" --color="black" />
+			<RemixIcon className="tile__icon tile__icon--faded" name="ri-weight-line" --size="2rem" />
 			<RemixIcon
-				className="tile__icon tile__icon--2"
+				className="tile__icon tile__icon--2 tile__icon--faded"
 				name="ri-ruler-line"
 				--size="2rem"
-				--color="black"
 			/>
 		</div>
 
@@ -54,7 +53,7 @@
 			<div class="tile__content text-h5">
 				<p>{pokemon.species}</p>
 			</div>
-			<RemixIcon className="tile__icon" name="ri-dna-line" --size="2rem" --color="black" />
+			<RemixIcon className="tile__icon tile__icon--faded" name="ri-dna-line" --size="2rem" />
 		</div>
 
 		<div class="tile tile--5 card">
@@ -62,12 +61,11 @@
 			<div class="tile__content text-h5">
 				<p>{pokemon.gender}</p>
 			</div>
-			<RemixIcon className="tile__icon" name="ri-women-line" --size="2rem" --color="black" />
+			<RemixIcon className="tile__icon tile__icon--faded" name="ri-women-line" --size="2rem" />
 			<RemixIcon
-				className="tile__icon tile__icon--2"
+				className="tile__icon tile__icon--2 tile__icon--faded"
 				name="ri-men-line"
 				--size="2rem"
-				--color="black"
 			/>
 		</div>
 
@@ -76,18 +74,21 @@
 			<div class="tile__content text-h5">
 				<p>{pokemon.description}</p>
 			</div>
-			<RemixIcon className="tile__icon" name="ri-double-quotes-l" --size="2rem" --color="black" />
+			<RemixIcon className="tile__icon tile__icon--faded" name="ri-double-quotes-l" --size="2rem" />
 			<RemixIcon
-				className="tile__icon tile__icon--2"
+				className="tile__icon tile__icon--2 tile__icon--faded"
 				name="ri-double-quotes-r"
 				--size="2rem"
-				--color="black"
 			/>
 		</div>
 	</div>
 </section>
 
 <style>
+	.text-h5 {
+		--color: var(--color-text-muted);
+	}
+
 	.tiles {
 		--num-cols: 1;
 		--num-rows: 6;
@@ -157,11 +158,14 @@
 		margin-top: 0.5em;
 	}
 
+	:global(.tile__icon--faded) {
+		opacity: 0.4;
+	}
+
 	:global(.tile__icon) {
 		position: absolute;
 		top: 0.25rem;
 		right: 0.25rem;
-		opacity: 0.15;
 	}
 
 	:global(.tile__icon--2) {

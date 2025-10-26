@@ -98,8 +98,12 @@
 	.input,
 	.select {
 		padding: 0.5em;
-		border: 2px solid black;
+		border: 1px solid var(--color-border-muted);
+		border-top-color: var(--color-highlight);
 		border-radius: 0.5em;
+		background-color: var(--color-bg-light);
+		color: var(--color-text);
+		box-shadow: var(--shadow);
 	}
 
 	.form__button {
@@ -107,5 +111,9 @@
 		align-items: center;
 		justify-content: center;
 		gap: 0.5rem;
+	}
+
+	.button {
+		--background-color: var(--color-bg-light);
 	}
 </style>

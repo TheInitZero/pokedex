@@ -389,6 +389,77 @@
 	.icon {
 		height: var(--size, 1rem);
 		width: var(--size, 1rem);
-		color: var(--color, white);
+	}
+
+	.icon--Bug {
+		color: var(--color-Bug);
+	}
+
+	.icon--Dark {
+		color: var(--color-Dark);
+	}
+
+	.icon--Dragon {
+		color: var(--color-Dragon);
+	}
+
+	.icon--Electric {
+		color: var(--color-Electric);
+	}
+
+	.icon--Fairy {
+		color: var(--color-Fairy);
+	}
+
+	.icon--Fighting {
+		color: var(--color-Fighting);
+	}
+
+	.icon--Fire {
+		color: var(--color-Fire);
+	}
+
+	.icon--Flying {
+		color: var(--color-Flying);
+	}
+
+	.icon--Ghost {
+		color: var(--color-Ghost);
+	}
+
+	.icon--Grass {
+		color: var(--color-Grass);
+	}
+
+	.icon--Ground {
+		color: var(--color-Ground);
+	}
+
+	.icon--Ice {
+		color: var(--color-Ice);
+	}
+
+	.icon--Normal {
+		color: var(--color-Normal);
+	}
+
+	.icon--Poison {
+		color: var(--color-Poison);
+	}
+
+	.icon--Psychic {
+		color: var(--color-Psychic);
+	}
+
+	.icon--Rock {
+		color: var(--color-Rock);
+	}
+
+	.icon--Steel {
+		color: var(--color-Steel);
+	}
+
+	.icon--Water {
+		color: var(--color-Water);
 	}
 </style>

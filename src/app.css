@@ -386,6 +386,7 @@ https://serp.co/tools/css-reset/
 }
 
 @layer base {
+	/* typography */
 	:root {
 		--font-family: 'PT Code', monospace;
 		--font-size-base: 1rem;
@@ -402,10 +403,89 @@ https://serp.co/tools/css-reset/
 		--font-size-h1: calc(var(--font-size-h2) * var(--scale));
 	}
 
+	/* colors */
+	:root {
+		--color-bg-dark: hsl(222 77% 2%);
+		--color-bg: hsl(216 53% 5%);
+		--color-bg-light: hsl(214 32% 9%);
+		--color-text: hsl(215 100% 97%);
+		--color-text-muted: hsl(215 29% 71%);
+		--color-highlight: hsl(214 18% 41%);
+		--color-border: hsl(214 24% 30%);
+		--color-border-muted: hsl(214 34% 19%);
+		--color-primary: hsl(214 78% 73%);
+		--color-secondary: hsl(36 58% 62%);
+		--color-danger: hsl(9 26% 64%);
+		--color-warning: hsl(52 19% 57%);
+		--color-success: hsl(146 17% 59%);
+		--color-info: hsl(217 28% 65%);
+
+		--color-Bug: hsl(78, 62%, 50%);
+		--color-Dark: hsl(252, 5%, 45%);
+		--color-Dragon: hsl(210, 89%, 55%);
+		--color-Electric: hsl(51, 86%, 57%);
+		--color-Fire: hsl(31, 96%, 64%);
+		--color-Fairy: hsl(305, 73%, 75%);
+		--color-Fighting: hsl(348, 62%, 65%);
+		--color-Flying: hsl(219, 66%, 78%);
+		--color-Ghost: hsl(231, 41%, 55%);
+		--color-Grass: hsl(116, 43%, 60%);
+		--color-Ground: hsl(20, 66%, 65%);
+		--color-Ice: hsl(170, 49%, 60%);
+		--color-Normal: hsl(100, 2%, 65%);
+		--color-Poison: hsl(287, 53%, 65%);
+		--color-Psychic: hsl(2, 92%, 74%);
+		--color-Rock: hsl(47, 37%, 66%);
+		--color-Steel: hsl(191, 31%, 55%);
+		--color-Water: hsl(208, 69%, 65%);
+	}
+
+	:root {
+		--shadow: 0px 2px 2px hsla(0, 0%, 0%, 0.2), 0px 4px 4px hsla(0, 0%, 0%, 0.1);
+	}
+
+	[data-theme='light'] {
+		--color-bg-dark: hsl(215 46% 91%);
+		--color-bg: hsl(215 100% 96%);
+		--color-bg-light: hsl(215 100% 100%);
+		--color-text: hsl(219 87% 6%);
+		--color-text-muted: hsl(214 24% 30%);
+		--color-highlight: hsl(215 100% 100%);
+		--color-border: hsl(214 16% 52%);
+		--color-border-muted: hsl(215 22% 64%);
+		--color-primary: hsl(214 60% 30%);
+		--color-secondary: hsl(41 100% 16%);
+		--color-danger: hsl(9 21% 41%);
+		--color-warning: hsl(52 23% 34%);
+		--color-success: hsl(147 19% 36%);
+		--color-info: hsl(217 22% 41%);
+
+		--color-Bug: hsl(78, 62%, 40%);
+		--color-Dark: hsl(252, 5%, 35%);
+		--color-Dragon: hsl(210, 89%, 45%);
+		--color-Electric: hsl(51, 86%, 47%);
+		--color-Fire: hsl(31, 96%, 54%);
+		--color-Fairy: hsl(305, 73%, 65%);
+		--color-Fighting: hsl(348, 62%, 55%);
+		--color-Flying: hsl(219, 66%, 68%);
+		--color-Ghost: hsl(231, 41%, 45%);
+		--color-Grass: hsl(116, 43%, 50%);
+		--color-Ground: hsl(20, 66%, 55%);
+		--color-Ice: hsl(170, 49%, 50%);
+		--color-Normal: hsl(100, 2%, 55%);
+		--color-Poison: hsl(287, 53%, 55%);
+		--color-Psychic: hsl(2, 92%, 64%);
+		--color-Rock: hsl(47, 37%, 56%);
+		--color-Steel: hsl(191, 31%, 45%);
+		--color-Water: hsl(208, 69%, 55%);
+	}
+
 	body {
 		font-family: var(--font-family);
 		font-size: var(--font-size-base);
 		line-height: var(--line-height);
+		background-color: var(--color-bg-dark);
+		color: var(--color-text-muted);
 	}
 
 	:where(
@@ -419,7 +499,7 @@ https://serp.co/tools/css-reset/
 		[tabindex]:not([tabindex='-1']),
 		[contentEditable='true']:not([tabindex='-1'])
 	):focus {
-		outline: 2px dashed tomato;
+		outline: 2px dashed var(--color-secondary);
 		outline-offset: 2px;
 	}
 
@@ -435,31 +515,37 @@ https://serp.co/tools/css-reset/
 	h6 {
 		font-size: var(--font-size-h6);
 		line-height: var(--line-height-heading);
+		color: var(--color-text);
 	}
 
 	h5 {
 		font-size: var(--font-size-h5);
 		line-height: var(--line-height-heading);
+		color: var(--color-text);
 	}
 
 	h4 {
 		font-size: var(--font-size-h4);
 		line-height: var(--line-height-heading);
+		color: var(--color-text);
 	}
 
 	h3 {
 		font-size: var(--font-size-h3);
 		line-height: var(--line-height-heading);
+		color: var(--color-text);
 	}
 
 	h2 {
 		font-size: var(--font-size-h2);
 		line-height: var(--line-height-heading);
+		color: var(--color-text);
 	}
 
 	h1 {
 		font-size: var(--font-size-h1);
 		line-height: var(--line-height-heading);
+		color: var(--color-text);
 	}
 }
 
@@ -467,12 +553,18 @@ https://serp.co/tools/css-reset/
 	.button {
 		--padding-vertical: 0.5em;
 		--padding-horizontal: 0.5em;
+		--border-color: var(--color-border-muted);
+		--background-color: var(--color-bg);
+		--color: var(--color-text);
+
 		display: inline-block;
 		padding: var(--padding-vertical) var(--padding-horizontal);
-		border: 2px solid black;
+		border: 1px solid var(--border-color);
+		border-top-color: var(--color-highlight);
 		border-radius: 0.5em;
-		background-color: black;
-		color: white;
+		background-color: var(--background-color);
+		color: var(--color);
+		box-shadow: var(--shadow);
 
 		&:disabled {
 			opacity: 50%;
@@ -498,8 +590,11 @@ https://serp.co/tools/css-reset/
 	.card {
 		--padding: 1em;
 		padding: var(--padding);
-		border: 2px solid black;
+		border: 1px solid var(--color-border-muted);
+		border-top-color: var(--color-highlight);
 		border-radius: var(--padding);
+		background-color: var(--color-bg);
+		box-shadow: var(--shadow);
 	}
 }
 
@@ -513,33 +608,45 @@ https://serp.co/tools/css-reset/
 	}
 
 	.text-h6 {
+		--color: var(--color-text);
 		font-size: var(--font-size-h6);
 		line-height: var(--line-height-heading);
+		color: var(--color);
 	}
 
 	.text-h5 {
+		--color: var(--color-text);
 		font-size: var(--font-size-h5);
 		line-height: var(--line-height-heading);
+		color: var(--color);
 	}
 
 	.text-h4 {
+		--color: var(--color-text);
 		font-size: var(--font-size-h4);
 		line-height: var(--line-height-heading);
+		color: var(--color);
 	}
 
 	.text-h3 {
+		--color: var(--color-text);
 		font-size: var(--font-size-h3);
 		line-height: var(--line-height-heading);
+		color: var(--color);
 	}
 
 	.text-h2 {
+		--color: var(--color-text);
 		font-size: var(--font-size-h2);
 		line-height: var(--line-height-heading);
+		color: var(--color);
 	}
 
 	.text-h1 {
+		--color: var(--color-text);
 		font-size: var(--font-size-h1);
 		line-height: var(--line-height-heading);
+		color: var(--color);
 	}
 
 	.wrapper {
