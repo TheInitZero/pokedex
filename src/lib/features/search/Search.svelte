@@ -104,6 +104,7 @@
 		background-color: var(--color-bg-light);
 		color: var(--color-text);
 		box-shadow: var(--shadow);
+		width: 100%;
 	}
 
 	.form__button {
