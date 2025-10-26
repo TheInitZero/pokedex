@@ -15,4 +15,8 @@
 		max-width: fit-content;
 		text-align: center;
 	}
+
+	.button {
+		--background-color: var(--color-bg-light);
+	}
 </style>
