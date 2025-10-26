@@ -47,10 +47,32 @@
 
 <style>
 	.card {
+		position: relative;
 		display: grid;
 		justify-items: center;
 		gap: 0.5rem;
-		max-width: 320px;
+		width: 280px;
+
+		&:focus-within {
+			outline: 2px dashed var(--color-secondary);
+		}
+	}
+
+	.card__link {
+		text-decoration: none;
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	.card__link::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
 	}
 
 	.card__type-list,
