@@ -15,19 +15,19 @@
 		class="card__image"
 		src="/assets/images/{getImageFileName(pokemon.id)}.png"
 		alt=""
-		height="284"
-		width="284"
+		height="160"
+		width="160"
 	/>
 
-	<h2 class="card__heading text-h3" id="pokemon-name-{pokemon.id}">
-		<a href="/{pokemon.id}">{pokemon.name}</a>
+	<h2 class="card__heading text-h6" id="pokemon-name-{pokemon.id}">
+		<a class="card__link" href="/{pokemon.id}">{pokemon.name}</a>
 	</h2>
 
 	<ul class="card__type-list" aria-label="{pokemon.name} belongs to the types:">
 		{#each pokemon.type as pokemonType}
 			<li class="card__group button">
 				<PokemonTypeIcon {pokemonType} --size="1.5rem" />
-				<span>{pokemonType}</span>
+				<span class="text-sm">{pokemonType}</span>
 			</li>
 		{/each}
 	</ul>
@@ -35,12 +35,12 @@
 	<div class="card__profile" aria-label="{pokemon.name}'s profile:">
 		<div class="card__group" aria-label="Weight">
 			<RemixIcon name="ri-weight-line" --size="1.5rem" />
-			<span>{pokemon.weight}</span>
+			<span class="text-sm">{pokemon.weight}</span>
 		</div>
 
 		<div class="card__group" aria-label="Height">
 			<RemixIcon name="ri-ruler-line" --size="1.5rem" />
-			<span>{pokemon.height}</span>
+			<span class="text-sm">{pokemon.height}</span>
 		</div>
 	</div>
 </article>
