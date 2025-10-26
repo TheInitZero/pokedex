@@ -657,6 +657,7 @@ https://serp.co/tools/css-reset/
 
 		@media (min-width: 475px) {
 			max-width: 475px;
+			padding: 1em;
 		}
 
 		@media (min-width: 640px) {
