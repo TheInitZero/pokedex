@@ -1,4 +1,6 @@
 <script lang="ts">
+	import RemixIcon from '$lib/components/RemixIcon.svelte';
+
 	type Props = {
 		currentPage: number;
 		lastPage: number;
@@ -26,7 +28,7 @@
 			class="pagination__link button"
 			aria-label="Previous"
 		>
-			<i class="icon icon--remix ri-arrow-left-line"></i>
+			<RemixIcon name="ri-arrow-left-line" --size="1.5rem" />
 		</button>
 
 		<span>Page {currentPage} of {lastPage}</span>
@@ -37,16 +39,12 @@
 			class="pagination__link button"
 			aria-label="Next"
 		>
-			<i class="icon icon--remix ri-arrow-right-line"></i>
+			<RemixIcon name="ri-arrow-right-line" --size="1.5rem" />
 		</button>
 	</div>
 </nav>
 
 <style>
-	.icon {
-		--size: 1.5rem;
-	}
-
 	.pagination {
 		display: grid;
 		place-content: center;

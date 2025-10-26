@@ -1,6 +1,7 @@
 <script lang="ts">
 	import PokemonTypeIcon from './PokemonTypeIcon.svelte';
 	import { getImageFileName, type Pokemon } from '$lib/index';
+	import RemixIcon from '$lib/components/RemixIcon.svelte';
 
 	type Props = {
 		pokemon: Pokemon;
@@ -33,12 +34,12 @@
 
 	<div class="card__profile" aria-label="{pokemon.name}'s profile:">
 		<div class="card__group" aria-label="Weight">
-			<i class="icon icon--remix ri-weight-line"></i>
+			<RemixIcon name="ri-weight-line" --size="1.5rem" --color="black" />
 			<span>{pokemon.weight}</span>
 		</div>
 
 		<div class="card__group" aria-label="Height">
-			<i class="icon icon--remix ri-ruler-line"></i>
+			<RemixIcon name="ri-ruler-line" --size="1.5rem" --color="black" />
 			<span>{pokemon.height}</span>
 		</div>
 	</div>
@@ -69,13 +70,5 @@
 		align-items: center;
 		gap: 0.5rem;
 		font-weight: bold;
-	}
-
-	.icon {
-		--color: black;
-	}
-
-	.card__group :global(.icon) {
-		--size: 1.5rem;
 	}
 </style>

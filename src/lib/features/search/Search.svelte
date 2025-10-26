@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { PokemonType } from '$lib';
+	import RemixIcon from '$lib/components/RemixIcon.svelte';
 
 	type Props = {
 		sendEvent(pokemonName: string, pokemonType: PokemonType): void;
@@ -58,7 +59,7 @@
 	<div class="form__group form__group--3">
 		<button class="button form__button" type="submit">
 			<span>Search</span>
-			<i class="icon icon--remix ri-search-line"></i>
+			<RemixIcon name="ri-search-line" />
 		</button>
 	</div>
 </form>

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import PokemonTypeIcon from './PokemonTypeIcon.svelte';
 	import { getImageFileName, type Pokemon } from '$lib/index';
+	import RemixIcon from '$lib/components/RemixIcon.svelte';
 
 	type Props = {
 		pokemon: Pokemon;
@@ -39,8 +40,13 @@
 					<span class="sr-only">Height:</span>{pokemon.height}
 				</p>
 			</div>
-			<i class="tile__icon icon icon--remix ri-weight-line"></i>
-			<i class="tile__icon icon icon--remix ri-ruler-line"></i>
+			<RemixIcon className="tile__icon" name="ri-weight-line" --size="2rem" --color="black" />
+			<RemixIcon
+				className="tile__icon tile__icon--2"
+				name="ri-ruler-line"
+				--size="2rem"
+				--color="black"
+			/>
 		</div>
 
 		<div class="tile tile--4 card">
@@ -48,7 +54,7 @@
 			<div class="tile__content text-h5">
 				<p>{pokemon.species}</p>
 			</div>
-			<i class="tile__icon icon icon--remix ri-dna-line"></i>
+			<RemixIcon className="tile__icon" name="ri-dna-line" --size="2rem" --color="black" />
 		</div>
 
 		<div class="tile tile--5 card">
@@ -56,8 +62,13 @@
 			<div class="tile__content text-h5">
 				<p>{pokemon.gender}</p>
 			</div>
-			<i class="tile__icon icon icon--remix ri-women-line"></i>
-			<i class="tile__icon icon icon--remix ri-men-line"></i>
+			<RemixIcon className="tile__icon" name="ri-women-line" --size="2rem" --color="black" />
+			<RemixIcon
+				className="tile__icon tile__icon--2"
+				name="ri-men-line"
+				--size="2rem"
+				--color="black"
+			/>
 		</div>
 
 		<div class="tile tile--6 card">
@@ -65,8 +76,13 @@
 			<div class="tile__content text-h5">
 				<p>{pokemon.description}</p>
 			</div>
-			<i class="tile__icon icon icon--remix ri-double-quotes-l"></i>
-			<i class="tile__icon icon icon--remix ri-double-quotes-r"></i>
+			<RemixIcon className="tile__icon" name="ri-double-quotes-l" --size="2rem" --color="black" />
+			<RemixIcon
+				className="tile__icon tile__icon--2"
+				name="ri-double-quotes-r"
+				--size="2rem"
+				--color="black"
+			/>
 		</div>
 	</div>
 </section>
@@ -141,11 +157,6 @@
 		margin-top: 0.5em;
 	}
 
-	.tile :global(.icon) {
-		--size: 2rem;
-		--color: black;
-	}
-
 	:global(.tile__icon) {
 		position: absolute;
 		top: 0.25rem;
@@ -153,7 +164,7 @@
 		opacity: 0.15;
 	}
 
-	:global(.tile__icon:nth-of-type(2)) {
+	:global(.tile__icon--2) {
 		bottom: 0.5rem;
 		top: auto;
 	}

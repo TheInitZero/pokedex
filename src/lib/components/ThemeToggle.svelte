@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { untrack } from 'svelte';
+	import RemixIcon from './RemixIcon.svelte';
 	let theme = $state<'light' | 'dark'>('light');
 
 	$effect(function onMount() {
@@ -28,16 +29,12 @@
 </script>
 
 <button onclick={toggle} class="button" aria-pressed={theme == 'dark'} aria-label="Dark Theme">
-	<i class="icon icon--remix {theme == 'light' ? 'ri-moon-fill' : 'ri-sun-fill'}"></i>
+	<RemixIcon name={theme == 'light' ? 'ri-moon-fill' : 'ri-sun-fill'} --size="1.5rem" />
 </button>
 
 <style>
 	.button {
 		display: grid;
 		place-content: center;
-	}
-
-	.icon {
-		--size: 1.5rem;
 	}
 </style>
