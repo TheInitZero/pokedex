@@ -568,7 +568,7 @@ https://serp.co/tools/css-reset/
 
 		&:disabled {
 			opacity: 50%;
-			cursor: not-allowed;
+			pointer-events: none;
 		}
 	}
 
