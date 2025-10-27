@@ -22,8 +22,24 @@
 	<Search />
 </section>
 
-<section aria-label="Pokemon cards">
-	<PokemonCardGrid {pokemons} />
-</section>
+{#if pokemons.length > 0}
+	<section aria-label="Pokemon cards">
+		<PokemonCardGrid {pokemons} />
+	</section>
 
-<Pagination {currentPage} {totalPages} {searchName} {searchType} />
+	<Pagination {currentPage} {totalPages} {searchName} {searchType} />
+{:else}
+	<section class="card no-results flow" aria-labelledby="no-results-title">
+		<h2 id="no-results-title" class="text-h5">No search results</h2>
+		<p>We couldn't find the pokemon you are looking for.</p>
+	</section>
+{/if}
+
+<style>
+	.no-results {
+		max-width: 320px;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+	}
+</style>
