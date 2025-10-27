@@ -17,6 +17,7 @@
 		alt=""
 		height="160"
 		width="160"
+		loading="lazy"
 	/>
 
 	<h2 class="card__heading text-h6" id="pokemon-name-{pokemon.id}">

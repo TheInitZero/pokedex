@@ -15,7 +15,12 @@
 
 	<div class="tiles">
 		<div class="tile tile--1 card">
-			<img class="tile__image" src="/assets/images/{getImageFileName(pokemon.id)}.png" alt="" />
+			<img
+				class="tile__image"
+				src="/assets/images/{getImageFileName(pokemon.id)}.png"
+				alt=""
+				loading="lazy"
+			/>
 		</div>
 
 		<div class="tile tile--2 card">
