@@ -14,8 +14,6 @@
 	let pokemons = $derived(
 		page.data.pokemons.slice(sliceIndex, sliceIndex + cardsPerPage)
 	) as Pokemon[];
-
-	$inspect({ totalPages, currentPage, searchName, searchType, sliceIndex, pokemons });
 </script>
 
 <section class="card" aria-label="Search">
