@@ -1,70 +1,29 @@
 <script lang="ts">
-	import { searchMachine } from '$lib/features/search/searchMachine';
-	import { paginationMachine } from '$lib/features/pagination/paginationMachine';
 	import PokemonCardGrid from '$lib/features/info/PokemonCardGrid.svelte';
 	import Pagination from '$lib/features/pagination/Pagination.svelte';
 	import Search from '$lib/features/search/Search.svelte';
-	import { useMachine } from '@xstate/svelte';
+	import { page } from '$app/state';
+	import type { Pokemon, PokemonType } from '$lib';
 
-	const { snapshot: searchMachineSnapshot, send: searchMachineSend } = useMachine(searchMachine);
+	const cardsPerPage = 12;
+	let totalPages = $derived(Math.ceil(page.data.pokemons.length / cardsPerPage));
+	let currentPage = $derived(Number(page.url.searchParams.get('page') ?? 1));
+	let searchName = $derived(page.url.searchParams.get('search-name') ?? '');
+	let searchType = $derived(page.url.searchParams.get('search-type') ?? 'All') as PokemonType;
+	let sliceIndex = $derived(cardsPerPage * (currentPage - 1));
+	let pokemons = $derived(
+		page.data.pokemons.slice(sliceIndex, sliceIndex + cardsPerPage)
+	) as Pokemon[];
 
-	let searchResults = $derived($searchMachineSnapshot.context.results);
-
-	const { snapshot: paginationMachineSnapshot, send: paginationMachineSend } = useMachine(
-		paginationMachine,
-		{
-			input: {
-				currentPage: 1,
-				lastPage: Math.ceil(searchResults.length / 12),
-				cardsPerPage: 12,
-				sliceStartIndex: 0
-			}
-		}
-	);
-
-	let paginationContext = $derived($paginationMachineSnapshot.context);
-
-	$effect(function onSearchResultsUpdate() {
-		paginationMachineSend({
-			type: 'SET_CONTEXT',
-			payload: {
-				context: {
-					currentPage: 1,
-					lastPage: Math.ceil(searchResults.length / 12),
-					cardsPerPage: 12,
-					sliceStartIndex: 0
-				}
-			}
-		});
-	});
+	$inspect({ totalPages, currentPage, searchName, searchType, sliceIndex, pokemons });
 </script>
 
 <section class="card" aria-label="Search">
-	<Search
-		sendEvent={function sendEvent(pokemonName, pokemonType) {
-			searchMachineSend({ type: 'SEARCH', payload: { pokemonName, pokemonType } });
-		}}
-	/>
+	<Search />
 </section>
 
 <section aria-label="Pokemon cards">
-	<PokemonCardGrid
-		pokemons={searchResults.slice(
-			paginationContext.sliceStartIndex,
-			paginationContext.sliceStartIndex + paginationContext.cardsPerPage
-		)}
-	/>
+	<PokemonCardGrid {pokemons} />
 </section>
 
-<Pagination
-	currentPage={paginationContext.currentPage}
-	lastPage={paginationContext.lastPage}
-	goToPrevPage={function goToPrevPage() {
-		paginationMachineSend({ type: 'PREV' });
-	}}
-	goToNextPage={function goToNextPage() {
-		paginationMachineSend({ type: 'NEXT' });
-	}}
-	prevButtonDisabled={paginationContext.currentPage <= 1}
-	nextButtonDisabled={paginationContext.currentPage >= paginationContext.lastPage}
-/>
+<Pagination {currentPage} {totalPages} {searchName} {searchType} />
