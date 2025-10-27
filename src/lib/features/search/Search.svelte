@@ -2,10 +2,6 @@
 	import type { PokemonType } from '$lib';
 	import RemixIcon from '$lib/components/RemixIcon.svelte';
 
-	type Props = {
-		sendEvent(pokemonName: string, pokemonType: PokemonType): void;
-	};
-
 	const pokemonTypes: PokemonType[] = [
 		'All',
 		'Normal',
@@ -27,21 +23,9 @@
 		'Dark',
 		'Fairy'
 	];
-
-	const { sendEvent }: Props = $props();
 </script>
 
-<form
-	onsubmit={function handleSubmit(event) {
-		event.preventDefault();
-		const formData = new FormData(event.currentTarget);
-		const pokemonName = formData.get('search-name')?.toString() ?? '';
-		const pokemonType = (formData.get('search-type')?.toString() ?? 'All') as PokemonType;
-		sendEvent(pokemonName, pokemonType);
-	}}
-	role="search"
-	class="form"
->
+<form role="search" class="form" method="get">
 	<div class="form__group form__group--1">
 		<label for="search-name">Name:</label>
 		<input class="input" type="text" name="search-name" id="search-name" />
