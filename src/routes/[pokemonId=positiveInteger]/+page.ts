@@ -7,3 +7,5 @@ export const load: PageLoad = async function load(event) {
 	if (pokemon == null) return error(404, { message: 'Pokémon not found' });
 	return { pokemon };
 };
+
+export const prerender = true;
