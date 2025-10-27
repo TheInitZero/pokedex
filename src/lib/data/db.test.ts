@@ -23,4 +23,31 @@ describe('db', () => {
 			expect(result[0].name).toBe('Bulbasaur');
 		});
 	});
+
+	describe('getPokemonsByName', () => {
+		test('It returns all the pokemons if name is an empty string provided.', () => {
+			const result = db.getPokemonsByName('');
+			expect(result.length).toBe(db.getIds('All').length);
+		});
+
+		test('It searches through all the pokemons if pokemons of a particular type are not provided.', () => {
+			const result = db.getPokemonsByName('bul');
+
+			const pokemonsOfSameType = result.every(function typesIncludesGrass(pokemon) {
+				return pokemon.type.includes('Grass');
+			});
+
+			expect(pokemonsOfSameType).toBeFalsy();
+		});
+
+		test('It searches through provided pokemons only.', () => {
+			const result = db.getPokemonsByName('bul', db.getPokemonsByType('Grass'));
+
+			const pokemonsOfSameType = result.every(function typesIncludesGrass(pokemon) {
+				return pokemon.type.includes('Grass');
+			});
+
+			expect(pokemonsOfSameType).toBeTruthy();
+		});
+	});
 });
