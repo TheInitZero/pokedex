@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { untrack } from 'svelte';
 	import RemixIcon from './RemixIcon.svelte';
+
 	let theme = $state<'light' | 'dark'>('light');
 
 	$effect(function onMount() {
@@ -14,7 +15,6 @@
 			theme = storedTheme;
 		} else {
 			theme = 'light';
-			localStorage.setItem('theme', 'light');
 		}
 	});
 
