@@ -1,46 +1,44 @@
 <script lang="ts">
+	import type { PokemonType } from '$lib';
 	import RemixIcon from '$lib/components/RemixIcon.svelte';
 
 	type Props = {
 		currentPage: number;
-		lastPage: number;
-		goToPrevPage: () => void;
-		goToNextPage: () => void;
-		prevButtonDisabled: boolean;
-		nextButtonDisabled: boolean;
+		totalPages: number;
+		searchName: string;
+		searchType: PokemonType;
 	};
 
-	const {
-		currentPage,
-		lastPage,
-		goToNextPage,
-		goToPrevPage,
-		prevButtonDisabled,
-		nextButtonDisabled
-	}: Props = $props();
+	const { totalPages, searchName, searchType, currentPage }: Props = $props();
+
+	function preparePageLink(page: number) {
+		return `/?search-name=${searchName}&search-type=${searchType}&page=${page}`;
+	}
 </script>
 
 <nav aria-label="Pagination" class="pagination">
 	<div class="pagination__group card">
-		<button
-			disabled={prevButtonDisabled}
-			onclick={goToPrevPage}
+		<a
+			aria-disabled={currentPage - 1 < 1}
+			href={currentPage - 1 >= 1 ? preparePageLink(currentPage - 1) : preparePageLink(currentPage)}
 			class="pagination__link button"
 			aria-label="Previous"
 		>
 			<RemixIcon name="ri-arrow-left-line" --size="1.5rem" />
-		</button>
+		</a>
 
-		<span>Page {currentPage} of {lastPage}</span>
+		<span>Page {currentPage} of {totalPages}</span>
 
-		<button
-			disabled={nextButtonDisabled}
-			onclick={goToNextPage}
+		<a
+			aria-disabled={currentPage + 1 > totalPages}
+			href={currentPage + 1 <= totalPages
+				? preparePageLink(currentPage + 1)
+				: preparePageLink(currentPage)}
 			class="pagination__link button"
 			aria-label="Next"
 		>
 			<RemixIcon name="ri-arrow-right-line" --size="1.5rem" />
-		</button>
+		</a>
 	</div>
 </nav>
 
@@ -61,6 +59,11 @@
 		display: grid;
 		place-content: center;
 		text-decoration: none;
+
+		&[aria-disabled='true'] {
+			opacity: 50%;
+			pointer-events: none;
+		}
 	}
 
 	.button {
