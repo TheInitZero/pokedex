@@ -41,3 +41,4 @@ A simple Pokédex application built using SvelteKit.
 - [UI colors](https://www.iamsajid.com/)
 - [Pokemon images](https://github.com/HybridShivam/Pokemon)
 - [Pokemon type svg icons](https://github.com/duiker101/pokemon-type-svg-icons)
+- [Pokemon JSON data](https://github.com/Purukitto/pokemon-data.json)
