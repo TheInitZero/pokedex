@@ -18,11 +18,9 @@
 <div class="wrapper">
 	<a class="skip-link button" href="#main">Skip to content</a>
 
-	<div class="flow">
-		<Header />
+	<Header />
 
-		<main id="main" class="flow">
-			{@render children?.()}
-		</main>
-	</div>
+	<main id="main" class="flow">
+		{@render children?.()}
+	</main>
 </div>

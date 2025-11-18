@@ -12,5 +12,6 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		margin-block-end: 1rem;
 	}
 </style>
