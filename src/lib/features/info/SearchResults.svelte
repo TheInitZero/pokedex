@@ -9,16 +9,22 @@
 	const { pokemons }: Props = $props();
 </script>
 
-<ul class="list">
-	{#each pokemons as pokemon (pokemon.id)}
-		<li class="list__item">
-			<PokemonCard {pokemon} />
-		</li>
-	{/each}
-</ul>
+<section class="results" aria-label="Search results">
+	<ul class="results__list">
+		{#each pokemons as pokemon (pokemon.id)}
+			<li class="results__list-item">
+				<PokemonCard {pokemon} />
+			</li>
+		{/each}
+	</ul>
+</section>
 
 <style>
-	.list {
+	.results {
+		margin-block-end: 1rem;
+	}
+
+	.results__list {
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -26,7 +32,7 @@
 		gap: 1rem;
 	}
 
-	.list__item {
+	.results__list-item {
 		list-style-type: none;
 	}
 </style>

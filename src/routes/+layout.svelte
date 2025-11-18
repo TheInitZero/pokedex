@@ -20,7 +20,7 @@
 
 	<Header />
 
-	<main id="main" class="flow">
+	<main id="main">
 		{@render children?.()}
 	</main>
 </div>
