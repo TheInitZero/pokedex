@@ -25,7 +25,7 @@
 	];
 </script>
 
-<form role="search" class="form" method="get">
+<form role="search" class="form card" method="get">
 	<div class="form__group form__group--1">
 		<label for="search-name">Name:</label>
 		<input class="input" type="text" name="search-name" id="search-name" />

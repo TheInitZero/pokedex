@@ -1,7 +1,6 @@
 <script lang="ts">
 	import PokemonCardGrid from '$lib/features/info/PokemonCardGrid.svelte';
 	import Pagination from '$lib/features/pagination/Pagination.svelte';
-	import Search from '$lib/features/search/Search.svelte';
 	import { page } from '$app/state';
 	import type { Pokemon, PokemonType } from '$lib';
 
@@ -15,10 +14,6 @@
 		page.data.pokemons.slice(sliceIndex, sliceIndex + cardsPerPage)
 	) as Pokemon[];
 </script>
-
-<section class="card" aria-label="Search">
-	<Search />
-</section>
 
 {#if pokemons.length > 0}
 	<section aria-label="Pokemon cards">
