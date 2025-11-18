@@ -2,25 +2,23 @@
 	import { page } from '$app/state';
 </script>
 
-<section class="error card flow" aria-labelledby="error-section-heading">
-	<h2 class="error__title" id="error-section-heading">Error: {page.status}</h2>
-	<img
-		class="error__image"
-		src="/assets/images/404.png"
-		alt=""
-		height="160"
-		width="160"
-		loading="lazy"
-	/>
-	<p class="error__message">{page.error?.message ?? 'Something went wrong'}</p>
-	<a class="error__link button" href="/">Go back to home page</a>
+<section class="error card" aria-labelledby="error-title">
+	<h2 class="error__title text-h5" id="error-title">Error: {page.status}</h2>
+
+	<img src="/assets/images/404.png" alt="" height="160" width="160" loading="lazy" />
+
+	<p>{page.error?.message ?? 'Something went wrong'}</p>
+
+	<a class="button" href="/">Home</a>
 </section>
 
 <style>
 	.error {
-		margin: 1em auto 0 auto;
-		max-width: fit-content;
-		text-align: center;
+		margin-inline: auto;
+		max-inline-size: 20rem;
+		display: grid;
+		gap: 0.5rem;
+		justify-items: center;
 	}
 
 	.button {
