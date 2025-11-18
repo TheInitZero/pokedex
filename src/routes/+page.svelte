@@ -20,17 +20,20 @@
 
 	<Pagination {currentPage} {totalPages} {searchName} {searchType} />
 {:else}
-	<section class="card no-results flow" aria-labelledby="no-results-title">
-		<h2 id="no-results-title" class="text-h5">No search results</h2>
-		<p>We couldn't find the pokemon you are looking for.</p>
+	<section class="card message" aria-labelledby="message-title">
+		<h2 id="message-title" class="message__title text-h5">No search results</h2>
+		<p>We couldn't find the pokémon you are looking for.</p>
 	</section>
 {/if}
 
 <style>
-	.no-results {
-		max-width: 320px;
-		margin-left: auto;
-		margin-right: auto;
+	.message {
+		max-inline-size: 20rem;
+		margin-inline: auto;
 		text-align: center;
+	}
+
+	.message__title {
+		margin-block-end: 0.5rem;
 	}
 </style>
