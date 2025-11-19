@@ -26,22 +26,22 @@
 </script>
 
 <form role="search" class="form card" method="get">
-	<div class="form__group form__group--1">
+	<div class="form__group">
 		<label for="search-name">Name:</label>
-		<input class="input" type="text" name="search-name" id="search-name" />
+		<input type="text" name="search-name" id="search-name" class="form__input" />
 	</div>
 
-	<div class="form__group form__group--2">
+	<div class="form__group">
 		<label for="search-type">Type:</label>
-		<select class="select" name="search-type" id="search-type">
+		<select name="search-type" id="search-type" class="form__select">
 			{#each pokemonTypes as pokemonType}
 				<option value={pokemonType}>{pokemonType}</option>
 			{/each}
 		</select>
 	</div>
 
-	<div class="form__group form__group--3">
-		<button class="button form__button" type="submit">
+	<div class="form__group form__group--span-full">
+		<button type="submit" class="button">
 			<span>Search</span>
 			<RemixIcon name="ri-search-line" />
 		</button>
@@ -49,15 +49,25 @@
 </form>
 
 <style>
+	.form__input,
+	.form__select {
+		inline-size: 100%;
+		padding: 0.5rem;
+		border-radius: 0.25rem;
+		border: 2px solid var(--color-border);
+		background-color: var(--color-bg-light);
+		color: var(--color-text);
+	}
+
 	.form {
 		display: grid;
-		gap: 1.5rem;
+		gap: 1rem;
 
-		@media (min-width: 475px) {
+		@media (width >= 39rem) {
 			grid-template-columns: repeat(2, 1fr);
 		}
 
-		@media (min-width: 768px) {
+		@media (width >= 58rem) {
 			grid-template-columns: 2fr 2fr 1fr;
 		}
 	}
@@ -67,38 +77,18 @@
 		gap: 0.5rem;
 	}
 
-	.form__group--3 {
-		@media (min-width: 475px) {
+	.form__group--span-full {
+		@media (width >= 39rem) {
 			grid-column: span 2;
 		}
 
-		@media (min-width: 768px) {
+		@media (width >= 58rem) {
 			grid-column: span 1;
-			justify-items: stretch;
-			align-items: end;
+			align-self: flex-end;
 		}
 	}
 
-	.input,
-	.select {
-		padding: 0.5em;
-		border: 1px solid var(--color-border-muted);
-		border-top-color: var(--color-highlight);
-		border-radius: 0.5em;
-		background-color: var(--color-bg-light);
-		color: var(--color-text);
-		box-shadow: var(--shadow);
-		width: 100%;
-	}
-
-	.form__button {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: 0.5rem;
-	}
-
 	.button {
-		--background-color: var(--color-bg-light);
+		background-color: var(--color-bg-light);
 	}
 </style>

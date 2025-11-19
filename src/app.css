@@ -512,6 +512,11 @@ https://serp.co/tools/css-reset/
 		max-width: 100%;
 	}
 
+	input,
+	select {
+		display: inline-block;
+	}
+
 	h6 {
 		font-size: var(--font-size-h6);
 		line-height: var(--line-height-heading);
