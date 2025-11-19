@@ -650,34 +650,20 @@ https://serp.co/tools/css-reset/
 	}
 
 	.wrapper {
-		width: 100%;
-		margin-left: auto;
-		margin-right: auto;
-		padding: 0.5em;
+		inline-size: 100%;
+		margin-inline: auto;
+		padding: 1rem;
 
-		@media (min-width: 475px) {
-			max-width: 475px;
-			padding: 1em;
+		@media (width >= 39rem) {
+			inline-size: 39rem;
 		}
 
-		@media (min-width: 640px) {
-			max-width: 640px;
+		@media (width >= 58rem) {
+			inline-size: 58rem;
 		}
 
-		@media (min-width: 768px) {
-			max-width: 768px;
-		}
-
-		@media (min-width: 1024px) {
-			max-width: 1024px;
-		}
-
-		@media (min-width: 1280px) {
-			max-width: 1280px;
-		}
-
-		@media (min-width: 1536px) {
-			max-width: 1536px;
+		@media (width >= 77rem) {
+			inline-size: 77rem;
 		}
 	}
 
