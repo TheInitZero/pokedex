@@ -25,11 +25,15 @@
 	}
 
 	.results__list {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		flex-wrap: wrap;
+		display: grid;
 		gap: 1rem;
+		grid-template-columns: repeat(auto-fit, 8.5rem);
+		place-content: center;
+
+		@media (width >= 39rem) {
+			grid-template-columns: repeat(auto-fit, 18rem);
+			place-content: stretch;
+		}
 	}
 
 	.results__list-item {
