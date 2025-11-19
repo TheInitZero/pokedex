@@ -21,7 +21,7 @@
 	<Pagination {currentPage} {totalPages} {searchName} {searchType} />
 {:else}
 	<section class="card message" aria-labelledby="message-title">
-		<h2 id="message-title" class="message__title text-h5">No search results</h2>
+		<h2 id="message-title" class="text-h5">No search results</h2>
 		<p>We couldn't find the pokémon you are looking for.</p>
 	</section>
 {/if}
@@ -31,9 +31,7 @@
 		max-inline-size: 20rem;
 		margin-inline: auto;
 		text-align: center;
-	}
-
-	.message__title {
-		margin-block-end: 0.5rem;
+		display: grid;
+		gap: 0.5rem;
 	}
 </style>
