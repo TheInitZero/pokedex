@@ -58,6 +58,10 @@
 <style>
 	.stats-section {
 		background-color: var(--color-bg);
+		box-shadow: var(--shadow);
+		border: 1px solid var(--color-border-muted);
+		border-top-color: var(--color-highlight);
+		border-radius: 0.5rem;
 		padding: 1rem;
 	}
 
@@ -77,6 +81,10 @@
 	}
 
 	.stat {
+		box-shadow: var(--shadow);
+		border: 1px solid var(--color-border-muted);
+		border-top-color: var(--color-highlight);
+		border-radius: 0.5rem;
 		display: grid;
 		gap: 0.5rem;
 		padding: 0.5rem;
