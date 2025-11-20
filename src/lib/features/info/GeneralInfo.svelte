@@ -63,8 +63,12 @@
 <style>
 	.info-section {
 		background-color: var(--color-bg);
+		box-shadow: var(--shadow);
 		margin-block-end: 1rem;
 		padding: 1rem;
+		border: 1px solid var(--color-border-muted);
+		border-radius: 0.5rem;
+		border-top-color: var(--color-highlight);
 	}
 
 	.info-section__title {
@@ -90,6 +94,10 @@
 		gap: 0.5rem;
 
 		@media (width >= 39rem) {
+			box-shadow: var(--shadow);
+			border: 1px solid var(--color-border-muted);
+			border-top-color: var(--color-highlight);
+			border-radius: 0.5rem;
 			background-color: var(--color-bg-light);
 			padding: 1rem;
 		}
