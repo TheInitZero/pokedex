@@ -1,5 +1,4 @@
 <script lang="ts">
-	import RemixIcon from '$lib/components/RemixIcon.svelte';
 	import { type Pokemon } from '$lib/index';
 
 	type Props = {
@@ -7,75 +6,84 @@
 	};
 
 	const { pokemon }: Props = $props();
+	const componentId = $props.id();
 </script>
 
-<section class="flow" aria-labelledby="stats-section-heading" aria-hidden={pokemon.hp == null}>
-	<h3 id="stats-section-heading">Stats</h3>
+<section
+	class="stats-section"
+	aria-labelledby="heading-{componentId}"
+	aria-hidden={pokemon.hp == null}
+>
+	<h3 class="stats-section__title" id="heading-{componentId}">Stats</h3>
 
-	<ul class="stats" aria-labelledby="stats-section-heading">
-		<li class="stat card">
-			<h4 class="stat__heading text-base">HP</h4>
-			<p class="stat__point text-h5">{pokemon.hp ?? '?'}</p>
-			<RemixIcon className="stat__icon" name="ri-heart-line" --size="2rem" />
-		</li>
-		<li class="stat card">
-			<h4 class="stat__heading text-base">Attack</h4>
-			<p class="stat__point text-h5">{pokemon.attack ?? '?'}</p>
-			<RemixIcon className="stat__icon" name="ri-sword-line" --size="2rem" />
-		</li>
-		<li class="stat card">
-			<h4 class="stat__heading text-base">Defense</h4>
-			<p class="stat__point text-h5">{pokemon.defense ?? '?'}</p>
-			<RemixIcon className="stat__icon" name="ri-shield-line" --size="2rem" />
-		</li>
-		<li class="stat card">
-			<h4 class="stat__heading text-base">Special Attack</h4>
-			<p class="stat__point text-h5">{pokemon['special attack'] ?? '?'}</p>
-			<RemixIcon className="stat__icon" name="ri-sword-fill" --size="2rem" />
-		</li>
-		<li class="stat card">
-			<h4 class="stat__heading text-base">Special Defense</h4>
-			<p class="stat__point text-h5">{pokemon['special defense'] ?? '?'}</p>
-			<RemixIcon className="stat__icon" name="ri-shield-fill" --size="2rem" />
-		</li>
-		<li class="stat card">
-			<h4 class="stat__heading text-base">Speed</h4>
-			<p class="stat__point text-h5">{pokemon.speed ?? '?'}</p>
-			<RemixIcon className="stat__icon" name="ri-dashboard-3-line" --size="2rem" />
-		</li>
-	</ul>
+	<div class="stats">
+		<div class="stat">
+			<h4 class="text-base">HP</h4>
+
+			<p>{pokemon.hp ?? '?'}</p>
+		</div>
+
+		<div class="stat">
+			<h4 class="text-base">Attack</h4>
+
+			<p>{pokemon.attack ?? '?'}</p>
+		</div>
+
+		<div class="stat">
+			<h4 class="text-base">Defense</h4>
+
+			<p>{pokemon.defense ?? '?'}</p>
+		</div>
+
+		<div class="stat">
+			<h4 class="text-base">Special Attack</h4>
+
+			<p>{pokemon['special attack'] ?? '?'}</p>
+		</div>
+
+		<div class="stat">
+			<h4 class="text-base">Special Defense</h4>
+
+			<p>{pokemon['special defense'] ?? '?'}</p>
+		</div>
+
+		<div class="stat">
+			<h4 class="text-base">Speed</h4>
+
+			<p>{pokemon.speed ?? '?'}</p>
+		</div>
+	</div>
 </section>
 
 <style>
-	.text-h5 {
-		--color: var(--color-text-muted);
+	.stats-section {
+		background-color: var(--color-bg);
+		padding: 1rem;
+	}
+
+	.stats-section__title {
+		margin-block-end: 1rem;
 	}
 
 	.stats {
-		--num-cols: 2;
 		display: grid;
 		gap: 1rem;
-		grid-template-columns: repeat(var(--num-cols), 1fr);
+		grid-template-columns: repeat(2, 1fr);
+		grid-auto-rows: 1fr;
 
-		@media (min-width: 768px) {
-			--num-cols: 3;
+		@media (width >= 39rem) {
+			grid-template-columns: repeat(3, 1fr);
 		}
 	}
 
 	.stat {
-		position: relative;
-		list-style-type: none;
 		display: grid;
-	}
+		gap: 0.5rem;
+		padding: 0.5rem;
+		background-color: var(--color-bg-light);
 
-	.stat__point {
-		margin-top: 0.5em;
-	}
-
-	:global(.stat__icon) {
-		position: absolute;
-		bottom: 0.25rem;
-		right: 0.25rem;
-		opacity: 0.4;
+		@media (width >= 39rem) {
+			padding: 1rem;
+		}
 	}
 </style>
