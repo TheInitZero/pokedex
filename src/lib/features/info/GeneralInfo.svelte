@@ -6,62 +6,72 @@
 	};
 
 	const { pokemon }: Props = $props();
+	const componentId = $props.id();
 </script>
 
-<section class="info" aria-labelledby="info-heading">
-	<h3 class="info__h3" id="info-heading">General Info</h3>
+<section class="info-section" aria-labelledby="heading-{componentId}">
+	<h3 class="info-section__title" id="heading-{componentId}">General Info</h3>
 
-	<div class="info-group info-group--img">
-		<img
-			class="info__img"
-			src="/assets/images/{getImageFileName(pokemon.id)}.png"
-			alt=""
-			loading="lazy"
-			height={16 * 16}
-			width={16 * 16}
-		/>
-	</div>
+	<div class="info">
+		<div class="info-group info-group--img">
+			<img
+				class="info__img"
+				src="/assets/images/{getImageFileName(pokemon.id)}.png"
+				alt=""
+				loading="lazy"
+				height={16 * 16}
+				width={16 * 16}
+			/>
+		</div>
 
-	<div class="info-group info-group--types">
-		<h4 class="text-base">Types</h4>
+		<div class="info-group info-group--types">
+			<h4 class="text-base">Types</h4>
 
-		<p>{pokemon.type.join(', ')}</p>
-	</div>
+			<p>{pokemon.type.join(', ')}</p>
+		</div>
 
-	<div class="info-group info-group--profile">
-		<h4 class="text-base">Profile</h4>
+		<div class="info-group info-group--profile">
+			<h4 class="text-base">Profile</h4>
 
-		<p>
-			<span class="sr-only">Weight:</span>{pokemon.weight},
+			<p>
+				<span class="sr-only">Weight:</span>{pokemon.weight},
 
-			<span class="sr-only">Height:</span>{pokemon.height}
-		</p>
-	</div>
+				<span class="sr-only">Height:</span>{pokemon.height}
+			</p>
+		</div>
 
-	<div class="info-group info-group--species">
-		<h4 class="text-base">Species</h4>
+		<div class="info-group info-group--species">
+			<h4 class="text-base">Species</h4>
 
-		<p>{pokemon.species}</p>
-	</div>
+			<p>{pokemon.species}</p>
+		</div>
 
-	<div class="info-group info-group--gender">
-		<h4 class="text-base">Gender Ratio</h4>
+		<div class="info-group info-group--gender">
+			<h4 class="text-base">Gender Ratio</h4>
 
-		<p>{pokemon.gender}</p>
-	</div>
+			<p>{pokemon.gender}</p>
+		</div>
 
-	<div class="info-group info-group--description">
-		<h4 class="text-base">Description</h4>
+		<div class="info-group info-group--description">
+			<h4 class="text-base">Description</h4>
 
-		<p>{pokemon.description}</p>
+			<p>{pokemon.description}</p>
+		</div>
 	</div>
 </section>
 
 <style>
-	.info {
+	.info-section {
 		background-color: var(--color-bg);
 		margin-block-end: 1rem;
 		padding: 1rem;
+	}
+
+	.info-section__title {
+		margin-block-end: 1rem;
+	}
+
+	.info {
 		display: grid;
 		gap: 1rem;
 
@@ -71,13 +81,7 @@
 
 		@media (width >= 58rem) {
 			grid-template-columns: repeat(3, 1fr);
-			grid-template-rows: repeat(4, auto);
-		}
-	}
-
-	.info__h3 {
-		@media (width >= 39rem) {
-			grid-column: 1 / -1;
+			grid-template-rows: repeat(3, auto);
 		}
 	}
 
@@ -111,10 +115,7 @@
 
 		@media (width >= 58rem) {
 			grid-column: 3 / -1;
-		}
-
-		@media (width >= 58rem) {
-			grid-row: 2 / -1;
+			grid-row: 1 / -1;
 		}
 	}
 
