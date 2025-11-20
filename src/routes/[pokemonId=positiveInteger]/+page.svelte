@@ -11,8 +11,15 @@
 	<title>{pokemon.name} | Pokédex</title>
 </svelte:head>
 
-<h2>{pokemon.name}</h2>
+<h2 class="page-title">{pokemon.name}</h2>
 
 <GeneralInfo {pokemon} />
 
 <PokemonStats {pokemon} />
+
+<style>
+	.page-title {
+		text-align: center;
+		margin-block-end: 1rem;
+	}
+</style>
