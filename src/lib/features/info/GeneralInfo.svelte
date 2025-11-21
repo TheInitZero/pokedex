@@ -9,7 +9,7 @@
 	const componentId = $props.id();
 </script>
 
-<section class="info-section" aria-labelledby="heading-{componentId}">
+<section class="info-section card" aria-labelledby="heading-{componentId}">
 	<h3 class="info-section__title" id="heading-{componentId}">General Info</h3>
 
 	<div class="info">
@@ -62,13 +62,7 @@
 
 <style>
 	.info-section {
-		background-color: var(--color-bg);
-		box-shadow: var(--shadow);
 		margin-block-end: 1rem;
-		padding: 1rem;
-		border: 1px solid var(--color-border-muted);
-		border-radius: 0.5rem;
-		border-top-color: var(--color-highlight);
 	}
 
 	.info-section__title {
@@ -95,7 +89,7 @@
 
 		@media (width >= 39rem) {
 			box-shadow: var(--shadow);
-			border: 1px solid var(--color-border-muted);
+			border: 2px solid var(--color-border-muted);
 			border-top-color: var(--color-highlight);
 			border-radius: 0.5rem;
 			background-color: var(--color-bg-light);

@@ -10,44 +10,44 @@
 </script>
 
 <section
-	class="stats-section"
+	class="stats-section card"
 	aria-labelledby="heading-{componentId}"
 	aria-hidden={pokemon.hp == null}
 >
 	<h3 class="stats-section__title" id="heading-{componentId}">Stats</h3>
 
 	<div class="stats">
-		<div class="stat">
+		<div class="stat card">
 			<h4 class="text-base">HP</h4>
 
 			<p>{pokemon.hp ?? '?'}</p>
 		</div>
 
-		<div class="stat">
+		<div class="stat card">
 			<h4 class="text-base">Attack</h4>
 
 			<p>{pokemon.attack ?? '?'}</p>
 		</div>
 
-		<div class="stat">
+		<div class="stat card">
 			<h4 class="text-base">Defense</h4>
 
 			<p>{pokemon.defense ?? '?'}</p>
 		</div>
 
-		<div class="stat">
+		<div class="stat card">
 			<h4 class="text-base">Special Attack</h4>
 
 			<p>{pokemon['special attack'] ?? '?'}</p>
 		</div>
 
-		<div class="stat">
+		<div class="stat card">
 			<h4 class="text-base">Special Defense</h4>
 
 			<p>{pokemon['special defense'] ?? '?'}</p>
 		</div>
 
-		<div class="stat">
+		<div class="stat card">
 			<h4 class="text-base">Speed</h4>
 
 			<p>{pokemon.speed ?? '?'}</p>
@@ -56,15 +56,6 @@
 </section>
 
 <style>
-	.stats-section {
-		background-color: var(--color-bg);
-		box-shadow: var(--shadow);
-		border: 1px solid var(--color-border-muted);
-		border-top-color: var(--color-highlight);
-		border-radius: 0.5rem;
-		padding: 1rem;
-	}
-
 	.stats-section__title {
 		margin-block-end: 1rem;
 	}
@@ -81,14 +72,10 @@
 	}
 
 	.stat {
-		box-shadow: var(--shadow);
-		border: 1px solid var(--color-border-muted);
-		border-top-color: var(--color-highlight);
-		border-radius: 0.5rem;
-		display: grid;
-		gap: 0.5rem;
 		padding: 0.5rem;
 		background-color: var(--color-bg-light);
+		display: grid;
+		gap: 0.5rem;
 
 		@media (width >= 39rem) {
 			padding: 1rem;

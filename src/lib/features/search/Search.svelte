@@ -25,7 +25,7 @@
 	];
 </script>
 
-<form role="search" class="form" method="get">
+<form role="search" class="form card" method="get">
 	<div class="form__group">
 		<label for="search-name">Name:</label>
 		<input type="text" name="search-name" id="search-name" class="form__input" />
@@ -61,12 +61,6 @@
 	}
 
 	.form {
-		box-shadow: var(--shadow);
-		border: 1px solid var(--color-border-muted);
-		border-top-color: var(--color-highlight);
-		border-radius: 0.5rem;
-		background-color: var(--color-bg);
-		padding: 1rem;
 		display: grid;
 		gap: 1rem;
 
