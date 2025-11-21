@@ -593,6 +593,14 @@ https://serp.co/tools/css-reset/
 		background-color: var(--color-bg);
 		padding: 1rem;
 	}
+
+	.remix-icon {
+		--remix-icon-size: 1rem;
+		--remix-icon-color: var(--color-text-muted);
+		height: var(--remix-icon-size);
+		width: var(--remix-icon-size);
+		fill: var(--remix-icon-color);
+	}
 }
 
 @layer utilities {

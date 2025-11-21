@@ -1,5 +1,4 @@
 <script lang="ts">
-	import 'remixicon/fonts/remixicon.css';
 	import '../app.css';
 	import Header from '$lib/components/Header.svelte';
 
