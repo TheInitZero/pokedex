@@ -557,20 +557,12 @@ https://serp.co/tools/css-reset/
 
 @layer components {
 	.button {
-		--padding-vertical: 0.5em;
-		--padding-horizontal: 0.5em;
-		--border-color: var(--color-border-muted);
-		--background-color: var(--color-bg);
-		--color: var(--color-text);
-
-		display: inline-block;
-		padding: var(--padding-vertical) var(--padding-horizontal);
-		border: 1px solid var(--border-color);
+		padding: 0.5rem;
+		border-radius: 0.25rem;
+		border: 2px solid var(--color-border-muted);
 		border-top-color: var(--color-highlight);
-		border-radius: 0.5em;
-		background-color: var(--background-color);
-		color: var(--color);
-		box-shadow: var(--shadow);
+		background-color: var(--color-bg);
+		color: var(--color-text);
 
 		&:disabled {
 			opacity: 50%;

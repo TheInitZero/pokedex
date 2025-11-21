@@ -22,6 +22,6 @@
 	}
 
 	.button {
-		--background-color: var(--color-bg-light);
+		background-color: var(--color-bg-light);
 	}
 </style>
