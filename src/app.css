@@ -513,7 +513,8 @@ https://serp.co/tools/css-reset/
 	}
 
 	input,
-	select {
+	select,
+	button {
 		display: inline-block;
 	}
 

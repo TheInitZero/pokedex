@@ -25,7 +25,7 @@
 	];
 </script>
 
-<form role="search" class="form card" method="get">
+<form role="search" class="form" method="get">
 	<div class="form__group">
 		<label for="search-name">Name:</label>
 		<input type="text" name="search-name" id="search-name" class="form__input" />
@@ -41,7 +41,7 @@
 	</div>
 
 	<div class="form__group form__group--span-full">
-		<button type="submit" class="button">
+		<button type="submit" class="form__button">
 			<span>Search</span>
 			<RemixIcon name="ri-search-line" />
 		</button>
@@ -50,7 +50,8 @@
 
 <style>
 	.form__input,
-	.form__select {
+	.form__select,
+	.form__button {
 		inline-size: 100%;
 		padding: 0.5rem;
 		border-radius: 0.25rem;
@@ -60,6 +61,12 @@
 	}
 
 	.form {
+		box-shadow: var(--shadow);
+		border: 1px solid var(--color-border-muted);
+		border-top-color: var(--color-highlight);
+		border-radius: 0.5rem;
+		background-color: var(--color-bg);
+		padding: 1rem;
 		display: grid;
 		gap: 1rem;
 
@@ -86,9 +93,5 @@
 			grid-column: span 1;
 			align-self: flex-end;
 		}
-	}
-
-	.button {
-		background-color: var(--color-bg-light);
 	}
 </style>
