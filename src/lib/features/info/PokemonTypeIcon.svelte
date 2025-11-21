@@ -35,7 +35,7 @@
 
 {#snippet iconBug()}
 	<svg
-		class="icon icon--Bug {className}"
+		class="pokemon-icon pokemon-icon--bug {className}"
 		fill="none"
 		height="48"
 		width="48"
@@ -52,7 +52,7 @@
 
 {#snippet iconDark()}
 	<svg
-		class="icon icon--Dark {className}"
+		class="pokemon-icon pokemon-icon--dark {className}"
 		width="48"
 		height="48"
 		viewBox="0 0 512 512"
@@ -70,7 +70,7 @@
 
 {#snippet iconDragon()}
 	<svg
-		class="icon icon--Dragon {className}"
+		class="pokemon-icon pokemon-icon--dragon {className}"
 		width="48"
 		height="48"
 		viewBox="0 0 512 512"
@@ -88,7 +88,7 @@
 
 {#snippet iconElectric()}
 	<svg
-		class="icon icon--Electric {className}"
+		class="pokemon-icon pokemon-icon--electric {className}"
 		width="48"
 		height="48"
 		viewBox="0 0 512 512"
@@ -106,7 +106,7 @@
 
 {#snippet iconFairy()}
 	<svg
-		class="icon icon--Fairy {className}"
+		class="pokemon-icon pokemon-icon--fairy {className}"
 		width="48"
 		height="48"
 		viewBox="0 0 512 512"
@@ -124,7 +124,7 @@
 
 {#snippet iconFighting()}
 	<svg
-		class="icon icon--Fighting {className}"
+		class="pokemon-icon pokemon-icon--fighting {className}"
 		width="48"
 		height="48"
 		viewBox="0 0 512 512"
@@ -142,7 +142,7 @@
 
 {#snippet iconFire()}
 	<svg
-		class="icon icon--Fire {className}"
+		class="pokemon-icon pokemon-icon--fire {className}"
 		width="48"
 		height="48"
 		viewBox="0 0 512 512"
@@ -160,7 +160,7 @@
 
 {#snippet iconFlying()}
 	<svg
-		class="icon icon--Flying {className}"
+		class="pokemon-icon pokemon-icon--flying {className}"
 		width="48"
 		height="48"
 		viewBox="0 0 512 512"
@@ -178,7 +178,7 @@
 
 {#snippet iconGhost()}
 	<svg
-		class="icon icon--Ghost {className}"
+		class="pokemon-icon pokemon-icon--ghost {className}"
 		width="48"
 		height="48"
 		viewBox="0 0 512 512"
@@ -196,7 +196,7 @@
 
 {#snippet iconGrass()}
 	<svg
-		class="icon icon--Grass {className}"
+		class="pokemon-icon pokemon-icon--grass {className}"
 		fill="none"
 		height="48"
 		width="48"
@@ -213,7 +213,7 @@
 
 {#snippet iconGround()}
 	<svg
-		class="icon icon--Ground {className}"
+		class="pokemon-icon pokemon-icon--ground {className}"
 		width="48"
 		height="48"
 		viewBox="0 0 512 512"
@@ -231,7 +231,7 @@
 
 {#snippet iconIce()}
 	<svg
-		class="icon icon--Ice {className}"
+		class="pokemon-icon pokemon-icon--ice {className}"
 		width="48"
 		height="48"
 		viewBox="0 0 512 512"
@@ -279,7 +279,7 @@
 
 {#snippet iconNormal()}
 	<svg
-		class="icon icon--Normal {className}"
+		class="pokemon-icon pokemon-icon--normal {className}"
 		width="48"
 		height="48"
 		viewBox="0 0 512 512"
@@ -297,7 +297,7 @@
 
 {#snippet iconPoison()}
 	<svg
-		class="icon icon--Poison {className}"
+		class="pokemon-icon pokemon-icon--poison {className}"
 		width="48"
 		height="48"
 		viewBox="0 0 512 512"
@@ -315,7 +315,7 @@
 
 {#snippet iconPsychic()}
 	<svg
-		class="icon icon--Psychic {className}"
+		class="pokemon-icon pokemon-icon--psychic {className}"
 		width="48"
 		height="48"
 		viewBox="0 0 512 512"
@@ -333,7 +333,7 @@
 
 {#snippet iconRock()}
 	<svg
-		class="icon icon--Rock {className}"
+		class="pokemon-icon pokemon-icon--rock {className}"
 		width="48"
 		height="48"
 		viewBox="0 0 512 512"
@@ -351,7 +351,7 @@
 
 {#snippet iconSteel()}
 	<svg
-		class="icon icon--Steel {className}"
+		class="pokemon-icon pokemon-icon--steel {className}"
 		width="48"
 		height="48"
 		viewBox="0 0 512 512"
@@ -369,7 +369,7 @@
 
 {#snippet iconWater()}
 	<svg
-		class="icon icon--Water {className}"
+		class="pokemon-icon pokemon-icon--water {className}"
 		width="48"
 		height="48"
 		viewBox="0 0 512 512"
@@ -386,80 +386,80 @@
 {/snippet}
 
 <style>
-	.icon {
-		height: var(--size, 1rem);
-		width: var(--size, 1rem);
+	.pokemon-icon {
+		height: var(--pokemon-icon-size, 1rem);
+		width: var(--pokemon-icon-size, 1rem);
 	}
 
-	.icon--Bug {
+	.pokemon-icon--bug {
 		color: var(--color-Bug);
 	}
 
-	.icon--Dark {
+	.pokemon-icon--dark {
 		color: var(--color-Dark);
 	}
 
-	.icon--Dragon {
+	.pokemon-icon--dragon {
 		color: var(--color-Dragon);
 	}
 
-	.icon--Electric {
+	.pokemon-icon--electric {
 		color: var(--color-Electric);
 	}
 
-	.icon--Fairy {
+	.pokemon-icon--fairy {
 		color: var(--color-Fairy);
 	}
 
-	.icon--Fighting {
+	.pokemon-icon--fighting {
 		color: var(--color-Fighting);
 	}
 
-	.icon--Fire {
+	.pokemon-icon--fire {
 		color: var(--color-Fire);
 	}
 
-	.icon--Flying {
+	.pokemon-icon--flying {
 		color: var(--color-Flying);
 	}
 
-	.icon--Ghost {
+	.pokemon-icon--ghost {
 		color: var(--color-Ghost);
 	}
 
-	.icon--Grass {
+	.pokemon-icon--grass {
 		color: var(--color-Grass);
 	}
 
-	.icon--Ground {
+	.pokemon-icon--ground {
 		color: var(--color-Ground);
 	}
 
-	.icon--Ice {
+	.pokemon-icon--ice {
 		color: var(--color-Ice);
 	}
 
-	.icon--Normal {
+	.pokemon-icon--normal {
 		color: var(--color-Normal);
 	}
 
-	.icon--Poison {
+	.pokemon-icon--poison {
 		color: var(--color-Poison);
 	}
 
-	.icon--Psychic {
+	.pokemon-icon--psychic {
 		color: var(--color-Psychic);
 	}
 
-	.icon--Rock {
+	.pokemon-icon--rock {
 		color: var(--color-Rock);
 	}
 
-	.icon--Steel {
+	.pokemon-icon--steel {
 		color: var(--color-Steel);
 	}
 
-	.icon--Water {
+	.pokemon-icon--water {
 		color: var(--color-Water);
 	}
 </style>
