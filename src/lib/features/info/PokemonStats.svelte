@@ -12,41 +12,41 @@
 	<h3 class="stats-section__title">Stats</h3>
 
 	<div class="stats">
-		<div class="stat card">
+		<section class="stat card">
 			<h4 class="text-base">HP</h4>
 
 			<p>{pokemon.hp ?? '?'}</p>
-		</div>
+		</section>
 
-		<div class="stat card">
+		<section class="stat card">
 			<h4 class="text-base">Attack</h4>
 
 			<p>{pokemon.attack ?? '?'}</p>
-		</div>
+		</section>
 
-		<div class="stat card">
+		<section class="stat card">
 			<h4 class="text-base">Defense</h4>
 
 			<p>{pokemon.defense ?? '?'}</p>
-		</div>
+		</section>
 
-		<div class="stat card">
+		<section class="stat card">
 			<h4 class="text-base">Special Attack</h4>
 
 			<p>{pokemon['special attack'] ?? '?'}</p>
-		</div>
+		</section>
 
-		<div class="stat card">
+		<section class="stat card">
 			<h4 class="text-base">Special Defense</h4>
 
 			<p>{pokemon['special defense'] ?? '?'}</p>
-		</div>
+		</section>
 
-		<div class="stat card">
+		<section class="stat card">
 			<h4 class="text-base">Speed</h4>
 
 			<p>{pokemon.speed ?? '?'}</p>
-		</div>
+		</section>
 	</div>
 </section>
 
