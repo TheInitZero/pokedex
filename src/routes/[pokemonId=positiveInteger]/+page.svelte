@@ -11,11 +11,13 @@
 	<title>{pokemon.name} | Pokédex</title>
 </svelte:head>
 
-<h2 class="page-title">{pokemon.name}</h2>
+<article>
+	<h2 class="page-title">{pokemon.name}</h2>
 
-<GeneralInfo {pokemon} />
+	<GeneralInfo {pokemon} />
 
-<PokemonStats {pokemon} />
+	<PokemonStats {pokemon} />
+</article>
 
 <style>
 	.page-title {
