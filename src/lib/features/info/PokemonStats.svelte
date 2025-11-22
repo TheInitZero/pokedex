@@ -12,43 +12,27 @@
 	<h3 class="stats-section__title">Stats</h3>
 
 	<div class="stats">
-		<section class="stat card">
-			<h4 class="text-base">HP</h4>
+		{@render stat({ name: 'HP', points: pokemon['hp'] })}
 
-			<p>{pokemon.hp ?? '?'}</p>
-		</section>
+		{@render stat({ name: 'Attack', points: pokemon['attack'] })}
 
-		<section class="stat card">
-			<h4 class="text-base">Attack</h4>
+		{@render stat({ name: 'Defense', points: pokemon['defense'] })}
 
-			<p>{pokemon.attack ?? '?'}</p>
-		</section>
+		{@render stat({ name: 'Special Attack', points: pokemon['special attack'] })}
 
-		<section class="stat card">
-			<h4 class="text-base">Defense</h4>
+		{@render stat({ name: 'Special Defense', points: pokemon['special defense'] })}
 
-			<p>{pokemon.defense ?? '?'}</p>
-		</section>
-
-		<section class="stat card">
-			<h4 class="text-base">Special Attack</h4>
-
-			<p>{pokemon['special attack'] ?? '?'}</p>
-		</section>
-
-		<section class="stat card">
-			<h4 class="text-base">Special Defense</h4>
-
-			<p>{pokemon['special defense'] ?? '?'}</p>
-		</section>
-
-		<section class="stat card">
-			<h4 class="text-base">Speed</h4>
-
-			<p>{pokemon.speed ?? '?'}</p>
-		</section>
+		{@render stat({ name: 'Speed', points: pokemon['speed'] })}
 	</div>
 </section>
+
+{#snippet stat({ name, points }: { name: string; points?: number })}
+	<section class="stat card">
+		<h4 class="text-base">{name}</h4>
+
+		<p>{points ?? '?'}</p>
+	</section>
+{/snippet}
 
 <style>
 	.stats-section__title {
