@@ -2,11 +2,9 @@ import type { Pokemon, PokemonType } from '$lib';
 import pokemonData from './pokemonData.json';
 import pokemonTypeIndex from './pokemonTypeIndex.json';
 
-export const db = { getPokemonsByType, getPokemonsByName, getIds, getPokemonById };
-
-function getPokemonsByName(
+export function searchPokemonsByName(
 	name: string,
-	pokemons: Pokemon[] = getPokemonsByType('All')
+	pokemons: Pokemon[] = searchPokemonsByType('All')
 ): Pokemon[] {
 	if (name.trim().length == 0) return pokemons;
 	return pokemons.filter(function namesMatch(pokemon) {
@@ -14,15 +12,15 @@ function getPokemonsByName(
 	});
 }
 
-function getPokemonsByType(pokemonType: PokemonType): Pokemon[] {
-	return getIds(pokemonType).map(getPokemonById);
+export function searchPokemonsByType(pokemonType: PokemonType): Pokemon[] {
+	return getPokemonIds(pokemonType).map(getPokemonById);
 }
 
-function getIds(pokemonType: PokemonType): number[] {
-	return pokemonTypeIndex[pokemonType];
-}
-
-function getPokemonById(id: number): Pokemon {
+export function getPokemonById(id: number): Pokemon {
 	//@ts-ignore
 	return pokemonData[id] as Pokemon;
+}
+
+function getPokemonIds(pokemonType: PokemonType): Pokemon['id'][] {
+	return pokemonTypeIndex[pokemonType];
 }
