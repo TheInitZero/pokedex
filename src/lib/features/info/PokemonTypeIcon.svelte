@@ -35,6 +35,7 @@
 
 {#snippet iconBug()}
 	<svg
+		aria-hidden="true"
 		class="pokemon-icon pokemon-icon--bug {className}"
 		fill="none"
 		height="48"
@@ -52,6 +53,7 @@
 
 {#snippet iconDark()}
 	<svg
+		aria-hidden="true"
 		class="pokemon-icon pokemon-icon--dark {className}"
 		width="48"
 		height="48"
@@ -70,6 +72,7 @@
 
 {#snippet iconDragon()}
 	<svg
+		aria-hidden="true"
 		class="pokemon-icon pokemon-icon--dragon {className}"
 		width="48"
 		height="48"
@@ -88,6 +91,7 @@
 
 {#snippet iconElectric()}
 	<svg
+		aria-hidden="true"
 		class="pokemon-icon pokemon-icon--electric {className}"
 		width="48"
 		height="48"
@@ -106,6 +110,7 @@
 
 {#snippet iconFairy()}
 	<svg
+		aria-hidden="true"
 		class="pokemon-icon pokemon-icon--fairy {className}"
 		width="48"
 		height="48"
@@ -124,6 +129,7 @@
 
 {#snippet iconFighting()}
 	<svg
+		aria-hidden="true"
 		class="pokemon-icon pokemon-icon--fighting {className}"
 		width="48"
 		height="48"
@@ -142,6 +148,7 @@
 
 {#snippet iconFire()}
 	<svg
+		aria-hidden="true"
 		class="pokemon-icon pokemon-icon--fire {className}"
 		width="48"
 		height="48"
@@ -160,6 +167,7 @@
 
 {#snippet iconFlying()}
 	<svg
+		aria-hidden="true"
 		class="pokemon-icon pokemon-icon--flying {className}"
 		width="48"
 		height="48"
@@ -178,6 +186,7 @@
 
 {#snippet iconGhost()}
 	<svg
+		aria-hidden="true"
 		class="pokemon-icon pokemon-icon--ghost {className}"
 		width="48"
 		height="48"
@@ -196,6 +205,7 @@
 
 {#snippet iconGrass()}
 	<svg
+		aria-hidden="true"
 		class="pokemon-icon pokemon-icon--grass {className}"
 		fill="none"
 		height="48"
@@ -213,6 +223,7 @@
 
 {#snippet iconGround()}
 	<svg
+		aria-hidden="true"
 		class="pokemon-icon pokemon-icon--ground {className}"
 		width="48"
 		height="48"
@@ -231,6 +242,7 @@
 
 {#snippet iconIce()}
 	<svg
+		aria-hidden="true"
 		class="pokemon-icon pokemon-icon--ice {className}"
 		width="48"
 		height="48"
@@ -279,6 +291,7 @@
 
 {#snippet iconNormal()}
 	<svg
+		aria-hidden="true"
 		class="pokemon-icon pokemon-icon--normal {className}"
 		width="48"
 		height="48"
@@ -297,6 +310,7 @@
 
 {#snippet iconPoison()}
 	<svg
+		aria-hidden="true"
 		class="pokemon-icon pokemon-icon--poison {className}"
 		width="48"
 		height="48"
@@ -315,6 +329,7 @@
 
 {#snippet iconPsychic()}
 	<svg
+		aria-hidden="true"
 		class="pokemon-icon pokemon-icon--psychic {className}"
 		width="48"
 		height="48"
@@ -333,6 +348,7 @@
 
 {#snippet iconRock()}
 	<svg
+		aria-hidden="true"
 		class="pokemon-icon pokemon-icon--rock {className}"
 		width="48"
 		height="48"
@@ -351,6 +367,7 @@
 
 {#snippet iconSteel()}
 	<svg
+		aria-hidden="true"
 		class="pokemon-icon pokemon-icon--steel {className}"
 		width="48"
 		height="48"
@@ -369,6 +386,7 @@
 
 {#snippet iconWater()}
 	<svg
+		aria-hidden="true"
 		class="pokemon-icon pokemon-icon--water {className}"
 		width="48"
 		height="48"
