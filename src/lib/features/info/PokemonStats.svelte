@@ -6,15 +6,10 @@
 	};
 
 	const { pokemon }: Props = $props();
-	const componentId = $props.id();
 </script>
 
-<section
-	class="stats-section card"
-	aria-labelledby="heading-{componentId}"
-	aria-hidden={pokemon.hp == null}
->
-	<h3 class="stats-section__title" id="heading-{componentId}">Stats</h3>
+<section class="stats-section card" aria-hidden={pokemon.hp == null}>
+	<h3 class="stats-section__title">Stats</h3>
 
 	<div class="stats">
 		<div class="stat card">

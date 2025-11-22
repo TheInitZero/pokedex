@@ -6,11 +6,10 @@
 	};
 
 	const { pokemon }: Props = $props();
-	const componentId = $props.id();
 </script>
 
-<section class="info-section card" aria-labelledby="heading-{componentId}">
-	<h3 class="info-section__title" id="heading-{componentId}">General Info</h3>
+<section class="info-section card">
+	<h3 class="info-section__title">General Info</h3>
 
 	<div class="info">
 		<div class="info-group info-group--img">

@@ -2,8 +2,8 @@
 	import { page } from '$app/state';
 </script>
 
-<section class="error card" aria-labelledby="error-title">
-	<h2 class="error__title text-h5" id="error-title">Error: {page.status}</h2>
+<section class="error card">
+	<h2 class="error__title text-h5">Error: {page.status}</h2>
 
 	<img src="/assets/images/404.png" alt="" height="160" width="160" loading="lazy" />
 

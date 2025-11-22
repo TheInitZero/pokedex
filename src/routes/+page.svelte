@@ -20,8 +20,8 @@
 
 	<Pagination {currentPage} {totalPages} {searchName} {searchType} />
 {:else}
-	<section class="card message" aria-labelledby="message-title">
-		<h2 id="message-title" class="text-h5">No search results</h2>
+	<section class="card message">
+		<h2 class="text-h5">No search results</h2>
 		<p>We couldn't find the pokémon you are looking for.</p>
 	</section>
 {/if}
