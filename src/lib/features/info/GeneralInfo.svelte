@@ -23,13 +23,13 @@
 			/>
 		</div>
 
-		<div class="info-group info-group--types">
+		<section class="info-group info-group--types">
 			<h4 class="text-base">Types</h4>
 
 			<p>{pokemon.type.join(', ')}</p>
-		</div>
+		</section>
 
-		<div class="info-group info-group--profile">
+		<section class="info-group info-group--profile">
 			<h4 class="text-base">Profile</h4>
 
 			<p>
@@ -37,25 +37,25 @@
 
 				<span class="sr-only">Height:</span>{pokemon.height}
 			</p>
-		</div>
+		</section>
 
-		<div class="info-group info-group--species">
+		<section class="info-group info-group--species">
 			<h4 class="text-base">Species</h4>
 
 			<p>{pokemon.species}</p>
-		</div>
+		</section>
 
-		<div class="info-group info-group--gender">
+		<section class="info-group info-group--gender">
 			<h4 class="text-base">Gender Ratio</h4>
 
 			<p>{pokemon.gender}</p>
-		</div>
+		</section>
 
-		<div class="info-group info-group--description">
+		<section class="info-group info-group--description">
 			<h4 class="text-base">Description</h4>
 
 			<p>{pokemon.description}</p>
-		</div>
+		</section>
 	</div>
 </section>
 
