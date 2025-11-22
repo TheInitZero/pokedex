@@ -5,12 +5,12 @@
 	import type { Pokemon, PokemonType } from '$lib';
 
 	const cardsPerPage = 12;
-	let totalPages = $derived(Math.ceil(page.data.pokemons.length / cardsPerPage));
-	let currentPage = $derived(Number(page.url.searchParams.get('page') ?? 1));
-	let searchName = $derived(page.url.searchParams.get('search-name') ?? '');
-	let searchType = $derived(page.url.searchParams.get('search-type') ?? 'All') as PokemonType;
-	let sliceIndex = $derived(cardsPerPage * (currentPage - 1));
-	let pokemons = $derived(
+	const totalPages = $derived(Math.ceil(page.data.pokemons.length / cardsPerPage));
+	const currentPage = $derived(Number(page.url.searchParams.get('page') ?? 1));
+	const searchName = $derived(page.url.searchParams.get('search-name') ?? '');
+	const searchType = $derived(page.url.searchParams.get('search-type') ?? 'All') as PokemonType;
+	const sliceIndex = $derived(cardsPerPage * (currentPage - 1));
+	const pokemons = $derived(
 		page.data.pokemons.slice(sliceIndex, sliceIndex + cardsPerPage)
 	) as Pokemon[];
 </script>
