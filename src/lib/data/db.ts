@@ -1,6 +1,17 @@
 import type { Pokemon, PokemonType } from '$lib';
-import pokemonData from './pokemonData.json';
-import pokemonTypeIndex from './pokemonTypeIndex.json';
+import _pokemonData from './pokemonData.json';
+import _pokemonTypeIndex from './pokemonTypeIndex.json';
+
+type PokemonDataMap = {
+	[id: string]: Pokemon;
+};
+
+type PokemonTypeIndexMap = {
+	[type in PokemonType]: Pokemon['id'][];
+};
+
+const pokemonData: PokemonDataMap = _pokemonData as PokemonDataMap;
+const pokemonTypeIndex: PokemonTypeIndexMap = _pokemonTypeIndex as PokemonTypeIndexMap;
 
 export function searchPokemonsByName(
 	name: string,
@@ -17,10 +28,9 @@ export function searchPokemonsByType(pokemonType: PokemonType): Pokemon[] {
 }
 
 export function getPokemonById(id: number): Pokemon {
-	//@ts-ignore
-	return pokemonData[id] as Pokemon;
+	return pokemonData[String(id)];
 }
 
-function getPokemonIds(pokemonType: PokemonType): Pokemon['id'][] {
+function getPokemonIds(pokemonType: PokemonType): PokemonTypeIndexMap[PokemonType] {
 	return pokemonTypeIndex[pokemonType];
 }
